@@ -1,0 +1,11 @@
+<footer role="contentinfo" class="site-footer">
+    <div class="wrapper">
+      <div class="site-footer__inner">
+        <p class="site-footer__text">&copy; <span id="currentYear"></span> {{ site.name }}. All rights reserved.</p>
+      </div>
+    </div>
+    <script>
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+  

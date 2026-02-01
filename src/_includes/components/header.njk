@@ -1,0 +1,22 @@
+<a class="[ skip-link ] [ button ] [ screen-reader-text ]" href="#main-content">Skip to content</a>
+
+<header role="banner" class="site-head">
+    <div class="wrapper">
+        <div class="site-head__inner">
+            <a href="/" aria-label="{{ site.name }} - home" class="site-head__brand"><span class="[ site-title ]">{{ site.name }}</span></a>
+        </div>
+    </div>
+</header>
+
+
+<nav class="[ nav ] [ site-nav ] [ font-sans ]" aria-label="Primary">
+    <div class="wrapper">
+        <ul class="nav__list" style="display: flex; gap: 1rem; list-style: none; padding: 1rem; margin: 0;">
+            {% for item in navigation.items %}
+            <li>
+                <a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</nav>

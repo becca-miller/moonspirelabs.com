@@ -1,0 +1,20 @@
+{
+	"items": [
+		{
+			"text": "Home",
+			"url": "/"
+		},
+		{
+			"text": "Consulting",
+			"url": "/consulting/"
+		},
+        {
+			"text": "Products",
+			"url": "/products/"
+		},
+        {
+			"text": "About",
+			"url": "/about/"
+		}
+	]
+}
