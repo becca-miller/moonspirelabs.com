@@ -1,13 +1,42 @@
 {% extends "layouts/base.njk" %}
+
 {% block content %}
-<article class="intro">
-	<div class="[ intro__header ]">
-		<h1 class="[ intro__heading ] [ weight-normal text-400 md:text-600 ]">
-			Products
-		</h1>
-	</div>
-	<div class="[ intro__content ] [ flow ]">
-		<p class="intro__body">Text goes here!</p>
-	</div>
-</article>
+{# Hero Section #}
+<section class="hero">
+  <h1 class="hero__header">{{ hero.header }}</h1>
+  <p class="hero__subheader">{{ hero.subheader }}</p>
+</section>
+
+{# Starling Section #}
+<section class="starling">
+  <h2 class="section-header">{{ starling.header }}</h2>
+  <h3 class="starling__tagline">{{ starling.tagline }}</h3>
+  
+  <p>{{ starling.intro }}</p>
+  
+  <h4>{{ starling.how_it_works.header }}</h4>
+  <ul>
+    {% for feature in starling.how_it_works.features %}
+      <li>{{ feature }}</li>
+    {% endfor %}
+  </ul>
+  
+  <p>{{ starling.philosophy }}</p>
+  <p><strong>Status:</strong> {{ starling.status }}</p>
+</section>
+
+{# Future Products Section #}
+<section class="future-products">
+  <h2 class="section-header">{{ future.header }}</h2>
+  <p>{{ future.text }}</p>
+</section>
+
+{# Why Section #}
+<section class="why">
+  <h2 class="section-header">{{ why.header }}</h2>
+  {% for paragraph in why.paragraphs %}
+    <p>{{ paragraph }}</p>
+  {% endfor %}
+</section>
+
 {% endblock %}

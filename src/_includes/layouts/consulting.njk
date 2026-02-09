@@ -1,13 +1,119 @@
 {% extends "layouts/base.njk" %}
+
 {% block content %}
-<article class="intro">
-	<div class="[ intro__header ]">
-		<h1 class="[ intro__heading ] [ weight-normal text-400 md:text-600 ]">
-			Consulting
-		</h1>
-	</div>
-	<div class="[ intro__content ] [ flow ]">
-		<p class="intro__body">Text goes here!</p>
-	</div>
-</article>
+{# Hero Section #}
+<section class="hero">
+  <h1 class="hero__header">{{ hero.header }}</h1>
+  <p class="hero__subheader">{{ hero.subheader }}</p>
+</section>
+
+{# Approach Section #}
+<section class="approach">
+  <h2 class="section-header">My Approach</h2>
+  <p>{{ approach.intro }}</p>
+  <p>{{ approach.philosophy }}</p>
+  
+  <h3>{{ approach.practices.header }}</h3>
+  <ul>
+    {% for practice in approach.practices.bullets %}
+      <li>{{ practice }}</li>
+    {% endfor %}
+  </ul>
+  
+  <p>{{ approach.closing }}</p>
+</section>
+
+{# Services Section #}
+<section class="services">
+  <h2 class="section-header">Services</h2>
+  
+  {% for service in services %}
+  <article class="service">
+    <h3 class="service__title">{{ service.title }}</h3>
+    <p class="service__intro">{{ service.intro }}</p>
+    
+    {% if service.description %}
+      <p>{{ service.description }}</p>
+    {% endif %}
+    
+    {% if service.bullets %}
+      <ul class="service__bullets">
+        {% for bullet in service.bullets %}
+          <li>{{ bullet }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    
+    <p class="service__closing">{{ service.closing }}</p>
+    
+    {% if service.note %}
+      <p class="service__note">{{ service.note }}</p>
+    {% endif %}
+    
+    {% if service.deliverables %}
+      <h4>{{ service.deliverables.header }}</h4>
+      <ul class="service__deliverables">
+        {% for item in service.deliverables.items %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    
+    <p class="service__pricing"><em>{{ service.pricing }}</em></p>
+  </article>
+  {% endfor %}
+</section>
+
+{# Technical Approach Section #}
+<section class="technical">
+  <h2 class="section-header">{{ technical.header }}</h2>
+  <p>{{ technical.languages | safe }}</p>
+  <p>{{ technical.infrastructure | safe }}</p>
+  
+  <h3>{{ technical.industries.header }}</h3>
+  <ul>
+    {% for industry in technical.industries.list %}
+      <li>{{ industry }}</li>
+    {% endfor %}
+  </ul>
+</section>
+
+{# Process Section #}
+<section class="process">
+  <h2 class="section-header">{{ process.header }}</h2>
+  
+  {% for step in process.steps %}
+  <article class="process-step">
+    <h3 class="process-step__title">
+      {{ step.title }}
+      {% if step.badge %}<span class="process-step__badge">({{ step.badge }})</span>{% endif %}
+    </h3>
+    <p class="process-step__description">{{ step.description }}</p>
+    
+    {% if step.bullets %}
+      <ul class="process-step__bullets">
+        {% for bullet in step.bullets %}
+          <li>{{ bullet }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    
+    {% if step.note %}
+      <p class="process-step__note">{{ step.note }}</p>
+    {% endif %}
+    
+    {% if step.credit %}
+      <p class="process-step__credit"><em>{{ step.credit }}</em></p>
+    {% endif %}
+  </article>
+  {% endfor %}
+</section>
+
+{# CTA Section #}
+<section class="cta">
+  <h2 class="cta__header">{{ cta.header }}</h2>
+  <p class="cta__text">{{ cta.text }}</p>
+  <p class="cta__note">{{ cta.note | safe }}</p>
+</section>
+
 {% endblock %}

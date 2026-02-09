@@ -1,29 +1,23 @@
 ---
-title: 'About'
-layout: 'layouts/about.njk'
-permalink: '/about/'
+title: About
+layout: layouts/about.njk
+permalink: /about/
+description: Moonspire Labs builds software for startups, research labs, and small teams. Moonspire Labs offers technical consulting and product development with a focus on maintainability and intentional design.
 
 hero:
-  header: 'About'
-  subheader: 'I started Moonspire Labs because I wanted to build software the way it should be: intentional, thoughtful, and aligned with the people who actually use it. After years in consulting, product development, and technical leadership roles, I saw a common challenge: teams often have ideas, prototypes, or scripts — but struggle to turn them into usable, reliable systems. Moonspire Labs exists to be the bridge between those ideas and real software that works.'
-consulting:
-  header: 'Consulting'
-  subheader: 'Most of my work today is with early product and research-driven teams. I help clarify what to build, prototype effectively, and turn experiments or fragile systems into maintainable, production-ready software.'
-  projects:
-    header: 'Typical engagements include:'
-    bullets:
-      - Early product development — turning concepts into prototypes and systems that can grow
-      - Technical scoping & decision-making — clarifying scope, identifying risks, and making tradeoffs
-      - Custom tools & automation — replacing brittle scripts or manual processes with reliable systems
-      - Research-to-software translation — turning experiments into usable software without distorting the underlying work
-    description: 'I work across industries including data-heavy organizations, media, healthcare-adjacent projects, research-focused teams, and applied AI/ML. Every engagement is scoped intentionally, with clear goals and realistic tradeoffs.'
-products:
-  header: 'Products'
-  subheader: 'Alongside consulting, I build independent software products guided by the same philosophy: clarity, usability, and long-term care. Starling, my first product, was born from a personal need: I was overwhelmed by constant streaming noise and wanted a way to engage intentionally with my music. Starling helps people explore and understand their own libraries, classify and tag tracks, and develop a deeper sense of their taste. It’s currently in active development, with early access and updates planned.'
-  description: Future products may take different forms, but all reflect the same values that guide my consulting work.
-background:
-  description: I’ve worked across consulting, product development, and technical leadership roles, supporting small teams as they design, build, and maintain real-world software systems. That experience informs how I approach every client engagement and product I create.
-closing:
-   text: Moonspire Labs exists to help teams turn ideas into working software — whether that’s consulting on complex technical projects or building independent products. If you’re navigating a challenging technical problem, I’d love to hear from you.
+  header: About
+  subheader: I'm Becca Miller. I started Moonspire Labs to build software the way I think it should be built—intentional, maintainable, and aligned with the people who actually use it.
 
+background:
+  paragraphs:
+    - I've spent years working across consulting, product development, and technical leadership roles—supporting small teams as they design, build, and maintain real-world software systems.
+    - Before consulting full-time, I worked as a research data analyst in the anesthesiology department of a children's hospital, where I published studies and learned firsthand how research teams work—and how much they need software that respects the integrity of their work without getting in the way.
+    - I have a background in biomedical engineering, and I've worked across industries from healthcare to media to AI/ML. What draws me to a project isn't the domain—it's the challenge of understanding new constraints, new problems, and new ways of thinking about software.
+    - I care about software that makes the world better—even in small ways. That might mean helping a startup validate an idea that improves people's lives. It might mean turning a researcher's fragile prototype into something others can actually use. It might mean building an internal tool that saves a small team hours of manual work every week.
+    - I don't believe in "move fast and break things." I think good software requires care, attention, and intentional tradeoffs. Sometimes things take longer to do properly, and I think that's time well spent.
+
+cta:
+  header: Let's Work Together
+  text: If you're building something and need help moving from concept to working software, let's talk.
+  note: '**Not sure if your project fits?** Reach out anyway. If I''m not the right fit, I''ll try to point you in a better direction.'
 ---

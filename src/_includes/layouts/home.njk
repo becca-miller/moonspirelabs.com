@@ -1,13 +1,86 @@
 {% extends "layouts/base.njk" %}
+
 {% block content %}
-<article class="intro">
-	<div class="[ intro__header ]">
-		<h1 class="[ intro__heading ] [ weight-normal text-400 md:text-600 ]">
-			{{ intro.headerText }}
-		</h1>
-	</div>
-	<div class="[ intro__content ] [ flow ]">
-		<p class="intro__body">{{ intro.bodyText }}</p>
-	</div>
-</article>
+{# Hero Section #}
+<section class="hero">
+  <h1 class="hero__header">{{ hero.header }}</h1>
+  <p class="hero__subheader">{{ hero.subheader }}</p>
+</section>
+
+{# Services Section #}
+<section class="services">
+  <h2 class="section-header">What I Do</h2>
+  
+  {% for service in services %}
+  <article class="service">
+    <h3 class="service__title">{{ service.title }}</h3>
+    <p class="service__intro">{{ service.intro }}</p>
+    
+    {% if service.description %}
+      <p>{{ service.description }}</p>
+    {% endif %}
+    
+    {% if service.bullets %}
+      <ul class="service__bullets">
+        {% for bullet in service.bullets %}
+          <li>{{ bullet }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    
+    <p class="service__closing">{{ service.closing }}</p>
+    <p class="service__pricing"><em>{{ service.pricing }}</em></p>
+  </article>
+  {% endfor %}
+</section>
+
+{# Process Section #}
+<section class="process">
+  <h2 class="section-header">{{ process.header }}</h2>
+  
+  {% for step in process.steps %}
+  <article class="process-step">
+    <h3 class="process-step__title">
+      <strong>{{ step.number }}.</strong> {{ step.title }}
+      {% if step.badge %}<span class="process-step__badge">({{ step.badge }})</span>{% endif %}
+    </h3>
+    <p class="process-step__description">{{ step.description }}</p>
+    
+    {% if step.bullets %}
+      <ul class="process-step__bullets">
+        {% for bullet in step.bullets %}
+          <li>{{ bullet }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    
+    {% if step.note %}
+      <p class="process-step__note">{{ step.note }}</p>
+    {% endif %}
+    
+    {% if step.credit %}
+      <p class="process-step__credit"><em>{{ step.credit }}</em></p>
+    {% endif %}
+  </article>
+  {% endfor %}
+</section>
+
+{# Audiences Section #}
+<section class="audiences">
+  <h2 class="section-header">{{ audiences.header }}</h2>
+  
+  {% for group in audiences.groups %}
+  <article class="audience">
+    <h3 class="audience__title">{{ group.title }}</h3>
+    <p class="audience__description">{{ group.description }}</p>
+  </article>
+  {% endfor %}
+</section>
+
+{# CTA Section #}
+<section class="cta">
+  <h2 class="cta__header">{{ cta.header }}</h2>
+  <p class="cta__text">{{ cta.text }}</p>
+</section>
+
 {% endblock %}
