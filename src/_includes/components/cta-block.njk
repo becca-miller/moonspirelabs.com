@@ -1,0 +1,15 @@
+{#
+  cta-block.njk
+  Usage: {% include "components/cta-block.njk" with cta %}
+  Expects variables:
+    text, button, secondary (optional)
+#}
+<div class="cta-block">
+  <p class="cta-block__text">{{ text }}</p>
+  {% if button %}
+    <a href="{{ button.url }}" class="cta-block__button">{{ button.label }}</a>
+  {% endif %}
+  {% if secondary %}
+    <span class="cta-block__secondary">{{ secondary }}</span>
+  {% endif %}
+</div>

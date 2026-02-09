@@ -1,0 +1,18 @@
+{#
+  card.njk
+  Usage: {% include "components/card.njk" with card %}
+  Expects variables:
+    title, description, link, image (optional)
+#}
+<div class="card">
+  {% if image %}
+    <img src="{{ image }}" alt="{{ title }} image" class="card__image" />
+  {% endif %}
+  <div class="card__body">
+    <h3 class="card__title">{{ title }}</h3>
+    <p class="card__description">{{ description }}</p>
+    {% if link %}
+      <a href="{{ link }}" class="card__link">Learn more</a>
+    {% endif %}
+  </div>
+</div>

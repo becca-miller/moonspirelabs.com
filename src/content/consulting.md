@@ -2,8 +2,13 @@
 title: 'Consulting'
 layout: 'layouts/consulting.njk'
 permalink: '/consulting/'
+
+hero:
+  header: 'Thoughtful consulting for complex technical work'
+  subheader: 'Moonspire Labs helps small teams solve meaningful technical problems — especially when the path forward isn''t obvious yet.'
+
 ---
 
-Our consulting services focus on product strategy, technical architecture, and team enablement. We work closely with stakeholders to define clear outcomes and measurable roadmaps.
+## Placeholder Content
 
-Contact us to discuss a short engagement or long-term partnership.
+This page content will be integrated from draft_copy/moonspire_website_copy.md during Phase 2 of development.
