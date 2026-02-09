@@ -57,18 +57,19 @@
   }
   
 /* Universal box-sizing reset to avoid unexpected widths */
-html, body {
-  height: 100%;
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;       /* Allow body to grow beyond viewport height */
   margin: 0;               /* Remove default margin */
   padding: 0;              /* Remove default padding */
   box-sizing: border-box;   /* Ensure padding doesn't expand element width */
   display: flex;
   flex-direction: column;
-}
-
-/* Ensure content takes up the available space */
-body {
-  flex: 1;
 }
 
 /* Ensure the main content area grows to fill available space */

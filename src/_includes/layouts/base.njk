@@ -16,10 +16,14 @@
 		{% endif %}
 	</head>
 	<body>
-		{% include "components/header.njk" %}
-		<main>
-			{% block content %}{% endblock %}
-		</main>
-		{% include "components/footer.njk" %}
+	{% include "components/header.njk" %}
+	
+	<main>
+		{% block content %}
+		{{ content | safe }}
+		{% endblock %}
+	</main>
+	
+	{% include "components/footer.njk" %}
 	</body>
 </html>

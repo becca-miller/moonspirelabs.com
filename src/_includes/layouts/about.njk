@@ -3,22 +3,28 @@
 {% block content %}
 {# Hero Section #}
 <section class="hero">
-  <h1 class="hero__header">{{ hero.header }}</h1>
-  <p class="hero__subheader">{{ hero.subheader }}</p>
+  <div class="container">
+    <h1>{{ hero.header }}</h1>
+    <p class="large">{{ hero.subheader }}</p>
+  </div>
 </section>
 
 {# Background Section #}
 <section class="background">
-  <h2 class="section-header">Background</h2>
-  {% for paragraph in background.paragraphs %}
-    <p>{{ paragraph }}</p>
-  {% endfor %}
+  <div class="container--text">
+    <h2 class="section-header">Background</h2>
+    {% for paragraph in background.paragraphs %}
+      <p>{{ paragraph }}</p>
+    {% endfor %}
+  </div>
 </section>
 
 {# CTA Section #}
 <section class="cta">
-  <h2 class="cta__header">{{ cta.header }}</h2>
-  <p class="cta__text">{{ cta.text }}</p>
+  <div class="container--narrow">
+    <h2 class="cta__header">{{ cta.header }}</h2>
+    <p class="cta__text">{{ cta.text }}</p>
+  </div>
 </section>
 
 {% endblock %}

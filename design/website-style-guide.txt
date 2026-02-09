@@ -1,0 +1,483 @@
+﻿Website Style Guide
+Based on Refactoring UI Principles
+Introduction
+This style guide establishes a comprehensive design system for your website, based on proven principles from Refactoring UI. It ensures consistency, speeds up design decisions, and creates a professional, polished interface without requiring extensive design expertise.
+1. Color System
+1.1 Color Philosophy
+Use HSL color format for easier manipulation and more intuitive color relationships. Build comprehensive color palettes with 8-10 shades per color.
+1.2 Grey Scale
+Greys are your most-used colors. Define 9 shades from near-black to near-white:
+Color
+Use Case
+HSL Value
+Grey 900
+Text, primary content
+hsl(220, 15%, 15%)
+Grey 800
+Dark text
+hsl(220, 12%, 25%)
+Grey 700
+Headings, important text
+hsl(220, 10%, 35%)
+Grey 600
+Body text
+hsl(220, 8%, 45%)
+Grey 500
+Secondary text
+hsl(220, 6%, 55%)
+Grey 400
+Placeholder text
+hsl(220, 5%, 65%)
+Grey 300
+Borders, dividers
+hsl(220, 4%, 75%)
+Grey 200
+Light backgrounds
+hsl(220, 3%, 85%)
+Grey 100
+Subtle backgrounds
+hsl(220, 2%, 95%)
+
+Note: These greys have a slight cool blue tint (hue: 220°) for a modern feel. For warmer greys, use hue 30-40°.
+1.3 Primary Color
+Your primary brand color should have 9 shades. Example (Blue):
+Color
+Use Case
+HSL Value
+Primary 900
+Darkest shade for text
+hsl(210, 100%, 15%)
+Primary 800
+Very dark
+hsl(210, 95%, 25%)
+Primary 700
+Dark
+hsl(210, 90%, 35%)
+Primary 600
+Dark medium
+hsl(210, 85%, 45%)
+Primary 500
+Base color (buttons)
+hsl(210, 80%, 55%)
+Primary 400
+Light medium
+hsl(210, 85%, 65%)
+Primary 300
+Light
+hsl(210, 90%, 75%)
+Primary 200
+Very light
+hsl(210, 95%, 85%)
+Primary 100
+Lightest (backgrounds)
+hsl(210, 100%, 95%)
+
+1.4 Accent Colors
+Define accent colors for semantic meaning and visual variety. Each should have 5-9 shades:
+    • Success/Positive: Green (hsl(145, 65%, 50%) for base)
+    • Warning/Caution: Yellow/Amber (hsl(40, 95%, 55%) for base)
+    • Error/Danger: Red (hsl(5, 75%, 55%) for base)
+    • Info/Neutral: Cyan/Teal (hsl(190, 70%, 50%) for base)
+1.5 Color Usage Guidelines
+    • Stick to 2-3 text colors: dark (primary), grey (secondary), light grey (tertiary)
+    • Don't use grey text on colored backgrounds — hand-pick colors based on the background
+    • Increase saturation in lighter/darker shades to prevent washed-out appearance
+    • Consider rotating hue slightly (20-30°) when adjusting lightness for more vibrant colors
+    • Never rely on color alone — combine with icons, text, or other visual cues for accessibility
+2. Typography
+2.1 Type Scale
+Define a restrictive type scale (in pixels or rem):
+Size
+Use Case
+px
+rem
+XS
+Small labels, captions
+12px
+0.75rem
+SM
+Secondary text, small UI
+14px
+0.875rem
+Base
+Body text, default
+16px
+1rem
+MD
+Emphasis text
+18px
+1.125rem
+LG
+Small headings
+20px
+1.25rem
+XL
+Medium headings
+24px
+1.5rem
+2XL
+Large headings
+30px
+1.875rem
+3XL
+Hero headings
+36px
+2.25rem
+4XL
+Display headings
+48px
+3rem
+
+2.2 Font Families
+Choose fonts with 5+ weights for maximum flexibility:
+    • Sans-serif (UI): Inter, SF Pro, Segoe UI, or system font stack
+    • Serif (Optional): For elegance/classic feel — Georgia, Merriweather
+    • Mono (Code): JetBrains Mono, Fira Code, Consolas
+2.3 Font Weights
+Limit to 2-3 weights for simplicity:
+    • Regular (400/500): Most text, body copy
+    • Semibold/Bold (600/700): Emphasis, headings, buttons
+    • Light (300): Only for large headings (never small text)
+2.4 Line Height
+Line height is inversely proportional to font size:
+Context
+Line Height
+Example
+Large headings (36px+)
+1.0 - 1.2
+Tight, minimal spacing
+Medium headings (24-36px)
+1.2 - 1.3
+Slightly relaxed
+Body text (16-20px)
+1.5 - 1.6
+Comfortable reading
+Small text (12-14px)
+1.6 - 1.8
+Extra spacing for legibility
+Wide paragraphs (70+ chars)
+1.8 - 2.0
+More spacing needed
+
+2.5 Line Length
+Optimal readability: 45-75 characters per line (20-35em width)
+    • Wider content (images, tables) can exceed this, but limit paragraph width
+    • Never force paragraphs to fill full screen width on large displays
+2.6 Letter Spacing
+    • Headlines: Tighten slightly (-0.02em to -0.05em) for condensed look
+    • All-caps text: Increase (0.05em to 0.1em) for readability
+    • Body text: Leave default (0) — trust the type designer
+3. Spacing & Layout
+3.1 Spacing Scale
+Base unit: 4px. Build a scale where values increase by ~25% each step:
+Name
+Value
+Use Case
+XS
+4px
+Tight spacing within elements
+SM
+8px
+Compact elements (button padding)
+MD
+12px
+Default element spacing
+Base
+16px
+Standard spacing (base unit)
+LG
+24px
+Comfortable spacing
+XL
+32px
+Section spacing
+2XL
+48px
+Large gaps between sections
+3XL
+64px
+Major section breaks
+4XL
+96px
+Hero section spacing
+5XL
+128px
+Dramatic spacing
+
+3.2 White Space Philosophy
+    • Start with too much white space, then remove until it feels right
+    • Dense UIs have their place (dashboards), but make it a deliberate choice
+    • More space around groups than within them to show relationships
+3.3 Container Widths
+    • Don't feel obligated to fill the whole screen — use what you need
+    • Consider fixed-width sidebars with fluid main content areas
+    • Design mobile-first at ~400px, then scale up as needed
+    • Maximum content width: 1200-1400px (wider feels unfocused)
+3.4 Grids
+    • Grids are useful but not mandatory — give elements the space they need
+    • Not everything should scale fluidly — use fixed widths when appropriate
+    • Elements should shrink only when necessary, not by default
+4. Visual Hierarchy
+Hierarchy is the most effective tool for making designs look professional. Not all elements are equal.
+4.1 Size & Weight
+    • Don't rely on size alone — combine size, weight, and color
+    • Use 2-3 font weights maximum (400/500 and 600/700)
+    • Avoid weights below 400 for UI text (readability issues)
+4.2 Color for Hierarchy
+    • Primary content: Dark color (grey-900)
+    • Secondary content: Medium grey (grey-600)
+    • Tertiary content: Light grey (grey-400)
+4.3 De-emphasis Over Emphasis
+Sometimes the best way to emphasize one element is to de-emphasize others:
+    • Soften inactive nav items instead of brightening active ones
+    • Remove backgrounds from competing elements
+    • Use lighter colors for supporting content
+4.4 Labels
+    • Labels are a last resort — try presenting data without them
+    • Combine labels and values when possible ('3 bedrooms' vs 'Bedrooms: 3')
+    • When labels are needed, de-emphasize them (smaller, lighter)
+5. Buttons & Actions
+5.1 Button Hierarchy
+Every page has a pyramid of action importance:
+Priority
+Style
+Example Use
+Primary
+Solid, high contrast bg
+Submit, Save, Confirm
+Secondary
+Outline or lower contrast
+Cancel, Back, Alternative actions
+Tertiary
+Text link style
+Learn more, Help, Rarely used actions
+
+5.2 Destructive Actions
+    • Don't make every destructive action big and red
+    • Use secondary styling if it's not the primary page action
+    • Save big/red styling for confirmation dialogs
+5.3 Button Sizing
+Size
+Height
+Padding (H)
+Font Size
+Use Case
+Small
+32px
+12px
+14px
+Dense UIs, tables
+Medium
+40px
+16px
+16px
+Default, most forms
+Large
+48px
+24px
+18px
+Primary CTAs, landing pages
+
+Note: Padding should get proportionally larger with button size, not scale linearly.
+6. Depth & Elevation
+6.1 Shadow System
+Define 5 shadow levels for elevation. Use two-part shadows (large soft + small dark) for best results:
+Level
+Elevation
+Shadow
+Use Case
+1
+Minimal
+0 1px 3px rgba(0,0,0,0.1)
+Buttons, slight lift
+2
+Low
+0 4px 6px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.05)
+Cards, hovering states
+3
+Medium
+0 10px 15px rgba(0,0,0,0.1), 0 4px 6px rgba(0,0,0,0.05)
+Dropdowns, popovers
+4
+High
+0 20px 25px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.04)
+Modals, important overlays
+5
+Highest
+0 25px 50px rgba(0,0,0,0.15), 0 15px 15px rgba(0,0,0,0.07)
+Large modals, dramatic effect
+
+6.2 Light Source
+    • Simulate light from above — lighter top edges, darker bottom edges
+    • Raised elements: Light top border/inset shadow, dark bottom shadow
+    • Inset elements: Dark top inset shadow, light bottom border
+6.3 Flat Design Depth
+    • Use color: lighter = closer, darker = further
+    • Solid offset shadows (no blur) for flat aesthetic
+    • Overlap elements to create layer effects
+7. Borders & Dividers
+7.1 Border Guidelines
+    • Use fewer borders — try box shadows, background colors, or spacing first
+    • Border width: 1px (standard), 2px (emphasis), 3-4px (accent borders)
+    • Border color: Use grey-300 as default, adjust based on background
+7.2 Alternatives to Borders
+Instead of Border
+Try This
+Example
+Card border
+Box shadow
+0 2px 4px rgba(0,0,0,0.1)
+Section divider
+Background color change
+Grey-100 to white transition
+List item separator
+Extra spacing
+24px gap instead of 1px line
+Button outline
+Lower contrast bg
+Primary-100 background
+Input border
+Subtle box shadow
+Inset shadow on focus
+
+7.3 Accent Borders
+Add visual interest with colorful accent borders (3-4px):
+    • Top of cards for categorization
+    • Left side of alerts or callouts
+    • Under active navigation items
+    • Top of page layouts for branding
+8. Images & Media
+8.1 Image Quality
+    • Use professional photography or high-quality stock (Unsplash, Pexels)
+    • Never use placeholder images in production
+    • Optimize file sizes without sacrificing quality
+8.2 Text on Images
+Ensure text readability with consistent contrast:
+    • Add overlay: Semi-transparent black (40-60%) or white overlay
+    • Lower contrast: Reduce image contrast before adding text
+    • Colorize: Apply single color overlay with multiply blend
+    • Text shadow: Subtle glow effect (0 2px 4px rgba(0,0,0,0.5))
+8.3 Icons
+    • Use at intended size — don't scale small icons to large sizes
+    • Reduce icon contrast to balance with text (use grey-600 not black)
+    • For large spaces, enclose small icons in colored shapes
+    • Consistent icon set (Heroicons, Feather, Lucide)
+8.4 User-Generated Content
+    • Control shape with fixed containers (crop with background-size: cover)
+    • Prevent background bleed with subtle inner box shadow
+    • Semi-transparent borders prevent harsh edges
+9. Finishing Touches
+9.1 Custom Elements
+    • Replace bullet points with custom icons (checkmarks, arrows)
+    • Style quotation marks as visual elements
+    • Custom checkboxes and radio buttons with brand colors
+    • Styled links (colored underlines, hover effects)
+9.2 Background Decoration
+    • Subtle color changes between sections
+    • Light gradient overlays (2 hues within 30°)
+    • Subtle repeating patterns (low contrast)
+    • Geometric shapes or illustrations in corners
+9.3 Empty States
+    • Design empty states as a priority, not an afterthought
+    • Include helpful illustration or icon
+    • Clear call-to-action to add first item
+    • Hide irrelevant UI (filters, tabs) until content exists
+10. Component Guidelines
+10.1 Forms
+Element
+Guideline
+Example
+Labels
+Above inputs, medium weight
+font-weight: 600, grey-700
+Inputs
+Height: 40-48px, padding: 12-16px
+border: 1px grey-300
+Focus state
+Border + box shadow
+border-primary-500, shadow-sm
+Error state
+Red border + error message
+border-error-500, text-error-700
+Help text
+Small, grey below input
+font-size: 14px, grey-600
+
+10.2 Cards
+    • Background: white or grey-50
+    • Border: none (use shadow-2 instead) or 1px grey-200
+    • Padding: 24-32px
+    • Border radius: 8-12px
+    • Hover state: Lift with larger shadow (shadow-2 → shadow-3)
+10.3 Navigation
+    • Active state: Primary color text, accent border
+    • Inactive state: Grey-600 text
+    • Hover state: Grey-900 text, grey-100 background
+    • Don't add underlines to nav links (use background or border)
+10.4 Modals & Dialogs
+    • Backdrop: rgba(0, 0, 0, 0.5) overlay
+    • Modal: white background, shadow-4 or shadow-5
+    • Max-width: 600px (don't fill entire screen)
+    • Footer: Separate with top border or background color
+11. Responsive Design
+11.1 Breakpoints
+Name
+Width
+Device
+Strategy
+Mobile
+< 640px
+Phones
+Single column, large touch targets
+Tablet
+640-1024px
+Tablets
+2 columns, adjust spacing
+Desktop
+1024-1440px
+Laptops
+Multi-column, optimal layout
+Large
+> 1440px
+Large screens
+Max-width containers, don't stretch
+
+11.2 Scaling Principles
+    • Large elements shrink faster than small elements
+    • Don't scale everything proportionally — adjust independently
+    • Headline: 48px → 32px (33% reduction)
+    • Body text: 18px → 16px (11% reduction)
+12. Accessibility
+12.1 Color Contrast
+    • Normal text (< 18px): minimum 4.5:1 contrast ratio
+    • Large text (≥ 18px): minimum 3:1 contrast ratio
+    • For colored backgrounds, hand-pick text colors (don't just lighten)
+    • Test with WebAIM Contrast Checker
+12.2 Alternative Techniques
+    • Flip contrast: Dark text on light colored background instead of light on dark
+    • Rotate hue: Shift toward brighter colors (cyan, yellow) for better contrast
+    • Never rely on color alone: Add icons, text labels, or patterns
+12.3 Interactive Elements
+    • Minimum touch target: 44x44px (mobile)
+    • Visible focus states for keyboard navigation
+    • Clear hover states to indicate interactivity
+13. Implementation Notes
+13.1 CSS Custom Properties
+Define your design system as CSS variables for easy maintenance:
+/* Colors */ --grey-900: hsl(220, 15%, 15%); --primary-500: hsl(210, 80%, 55%);  /* Spacing */ --space-sm: 8px; --space-base: 16px;  /* Typography */ --font-base: 16px; --font-xl: 24px;
+13.2 Workflow Tips
+    • Design in grayscale first, add color later
+    • Start with features, not full layouts
+    • Work in short cycles: design → build → iterate
+    • Use process of elimination when choosing from your system
+    • Build real UI early — don't over-invest in mockups
+14. Next Steps
+Continual Improvement
+    • Study designs you admire — look for unintuitive decisions
+    • Rebuild favorite interfaces to discover hidden details
+    • Keep refining your system based on real project needs
+    • Don't add new values without careful consideration
+Remember
+Good design is about systems and constraints, not artistic talent. By following these guidelines and using the defined values, you'll create consistent, professional interfaces that users will love.
+—
+Now go build something beautiful!

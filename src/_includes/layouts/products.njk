@@ -3,40 +3,48 @@
 {% block content %}
 {# Hero Section #}
 <section class="hero">
-  <h1 class="hero__header">{{ hero.header }}</h1>
-  <p class="hero__subheader">{{ hero.subheader }}</p>
+  <div class="container">
+    <h1>{{ hero.header }}</h1>
+    <p class="large">{{ hero.subheader }}</p>
+  </div>
 </section>
 
 {# Starling Section #}
 <section class="starling">
-  <h2 class="section-header">{{ starling.header }}</h2>
-  <h3 class="starling__tagline">{{ starling.tagline }}</h3>
-  
-  <p>{{ starling.intro }}</p>
-  
-  <h4>{{ starling.how_it_works.header }}</h4>
-  <ul>
-    {% for feature in starling.how_it_works.features %}
-      <li>{{ feature }}</li>
-    {% endfor %}
-  </ul>
-  
-  <p>{{ starling.philosophy }}</p>
-  <p><strong>Status:</strong> {{ starling.status }}</p>
+  <div class="container">
+    <h2 class="section-header">{{ starling.header }}</h2>
+    <h3 class="starling__tagline">{{ starling.tagline }}</h3>
+    
+    <p>{{ starling.intro }}</p>
+    
+    <h4>{{ starling.how_it_works.header }}</h4>
+    <ul>
+      {% for feature in starling.how_it_works.features %}
+        <li>{{ feature }}</li>
+      {% endfor %}
+    </ul>
+    
+    <p>{{ starling.philosophy }}</p>
+    <p><strong>Status:</strong> {{ starling.status }}</p>
+  </div>
 </section>
 
 {# Future Products Section #}
 <section class="future-products">
-  <h2 class="section-header">{{ future.header }}</h2>
-  <p>{{ future.text }}</p>
+  <div class="container--narrow">
+    <h2 class="section-header">{{ future.header }}</h2>
+    <p>{{ future.text }}</p>
+  </div>
 </section>
 
 {# Why Section #}
 <section class="why">
-  <h2 class="section-header">{{ why.header }}</h2>
-  {% for paragraph in why.paragraphs %}
-    <p>{{ paragraph }}</p>
-  {% endfor %}
+  <div class="container--narrow">
+    <h2 class="section-header">{{ why.header }}</h2>
+    {% for paragraph in why.paragraphs %}
+      <p>{{ paragraph }}</p>
+    {% endfor %}
+  </div>
 </section>
 
 {% endblock %}
