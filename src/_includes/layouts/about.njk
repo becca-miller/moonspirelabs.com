@@ -9,21 +9,25 @@
   </div>
 </section>
 
-{# Background Section #}
-<section class="background">
-  <div class="container--text">
-    <h2 class="section-header">Background</h2>
-    {% for paragraph in background.paragraphs %}
-      <p>{{ paragraph }}</p>
-    {% endfor %}
+{# Bio Section #}
+<section class="bio">
+  <div class="container">
+    <div class="content--medium">
+      {% for paragraph in bio %}
+        <p>{{ paragraph | safe }}</p>
+      {% endfor %}
+    </div>
   </div>
 </section>
 
 {# CTA Section #}
 <section class="cta">
-  <div class="container--narrow">
+  <div class="container container--narrow">
     <h2 class="cta__header">{{ cta.header }}</h2>
     <p class="cta__text">{{ cta.text }}</p>
+    {% if cta.button %}
+      <a href="{{ cta.button.link }}" class="btn btn--primary btn--large">{{ cta.button.text }}</a>
+    {% endif %}
   </div>
 </section>
 

@@ -2,52 +2,28 @@
 title: Products
 layout: layouts/products.njk
 permalink: /products/
-description: Moonspire Labs develops products including Starling, a lightweight research database app designed for labs and small teams.
+description: Alongside consulting, I build independent software — technology that helps people reflect, create, and occasionally do something a little unexpected.
 
 hero:
   header: Products
-  subheader: In addition to consulting, I'm building products that solve real problems for small teams and research groups.
+  subheader: Alongside consulting, I build independent software. The common thread — technology that helps people reflect, create, and occasionally do something a little unexpected.
 
 starling:
   header: Starling
-  tagline: A lightweight research database app for labs and small teams
-  intro: >
-    Starling is designed for research teams who need to track participants, studies, and data points—without
-    the overhead of enterprise tools or the fragility of spreadsheets.
-  how_it_works:
-    title: How it works
-    steps:
-      - title: Define your data
-        description: Set up custom fields for participants, studies, or whatever you're tracking. No coding required.
-      
-      - title: Track your work
-        description: Log visits, record notes, and manage workflows all in one place. Simple, organized, and reliable.
-      
-      - title: Export or analyze
-        description: Export your data to work with it however you need—whether that's for analysis, reporting, or sharing.
-  
-  philosophy: >
-    Research software shouldn't require a CS degree to use or maintain. Starling is built to be simple,
-    reliable, and actually useful for the people who need it.
-  
-  status:
-    text: Currently in early development.
-    note: Interested in being an early user or have feedback on what this should include? Reach out—I'd love to hear from you.
-
-future:
-  header: More to come
-  text: >
-    Starling is the first product from Moonspire Labs, but not the last. My goal is to build tools
-    that help small teams work better—whether that's research labs, startups, or anyone building
-    something meaningful.
-
-why:
-  header: Why build products?
-  text: >
-    Consulting is where I learn what teams actually need. Products are where I turn those insights
-    into tools that can help more people. The two feed into each other—and both matter.
+  tagline: A desktop app for people who actually want to know their music library.
+  description: >
+    Most music tools are built for passive listening. Starling is built for something
+    different — for people with local music collections who want to stop accumulating
+    files and start understanding what they actually like.
+  how_it_works: >
+    The core loop is simple: import your library, listen to a small set of songs, answer
+    a few guided questions about what you heard, and make a decision — keep it, skip it,
+    or let it go. Over time, you build a curated library that reflects your actual taste,
+    not an algorithm's guess at it.
+  platforms: Available on Windows, macOS, and Linux.
+  status: "In active development — launching soon. Sign up below to be notified when it's available."
 
 cta:
-  header: Questions about Starling?
-  text: If you're interested in early access, have feedback on what a tool like this should include, or just want to learn more, reach out.
+  header: Stay in the loop
+  text: "Sign up to hear about new product launches and updates:"
 ---

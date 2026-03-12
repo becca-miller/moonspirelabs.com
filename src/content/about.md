@@ -2,22 +2,59 @@
 title: About
 layout: layouts/about.njk
 permalink: /about/
-description: Moonspire Labs builds software for startups, research labs, and small teams. Moonspire Labs offers technical consulting and product development with a focus on maintainability and intentional design.
+description: "Becca Miller — nearly 10 years building software for clients, for myself, and for problems I couldn't stop thinking about."
 
 hero:
-  header: About
-  subheader: I'm Becca Miller. I started Moonspire Labs to build software the way I think it should be built—intentional, maintainable, and aligned with the people who actually use it.
+  header: Becca Miller
+  subheader: I've spent nearly 10 years building software — for clients, for myself, and for problems I couldn't stop thinking about.
 
-background:
-  paragraphs:
-    - I've spent years working across consulting, product development, and technical leadership roles—supporting small teams as they design, build, and maintain real-world software systems.
-    - Before consulting full-time, I worked as a research data analyst in the anesthesiology department of a children's hospital, where I published studies and learned firsthand how research teams work—and how much they need software that respects the integrity of their work without getting in the way.
-    - I have a background in biomedical engineering, and I've worked across industries from healthcare to media to AI/ML. What draws me to a project isn't the domain—it's the challenge of understanding new constraints, new problems, and new ways of thinking about software.
-    - I care about software that makes the world better—even in small ways. That might mean helping a startup validate an idea that improves people's lives. It might mean turning a researcher's fragile prototype into something others can actually use. It might mean building an internal tool that saves a small team hours of manual work every week.
-    - I don't believe in "move fast and break things." I think good software requires care, attention, and intentional tradeoffs. Sometimes things take longer to do properly, and I think that's time well spent.
+bio:
+  - >
+    I studied biomedical engineering at Johns Hopkins, which is probably why my first job out
+    of college was in a hospital research department rather than a software company. I spent
+    two years embedded in the anesthesiology department at Nationwide Children's Hospital —
+    collaborating with clinicians, running statistical analysis, designing research methodology,
+    and contributing to published work. (Full publication list on <a href="https://orcid.org">ORCID</a>.)
+  - >
+    From there I moved into software engineering proper, joining READY Robotics as a software
+    engineer — and that's where my thinking about building things really changed. I'd spent
+    years writing research scripts with defined workflows and controlled conditions — code
+    that worked because the people using it were following a specific protocol. READY was my
+    first encounter with production software, and real users don't follow defined workflows.
+    They find every edge case you didn't anticipate, every path you assumed nobody would take.
+    That's where I developed a deep instinct for QA, for predicting how things break, and for
+    building software that holds up when people use it in ways you didn't expect. I also got
+    my first real taste of the full product cycle — hardware integration, translating wireframes
+    into working features, wearing a lot of hats in a small startup, and learning how to get
+    from "here's what we want" to "here's what we can actually build."
+  - >
+    When I left READY, I didn't go looking for another full-time role. I wanted to build my
+    own things and take on consulting work that let me keep doing both. That's still true
+    today — the consulting and the products are expressions of the same instinct. I'm most at
+    home when I'm figuring out what to build and then building it, especially when the problem
+    doesn't have an obvious answer yet. That instinct is also why I push back on AI as a
+    default answer — it's a powerful tool, but part of my job is knowing when something simpler
+    is faster, cheaper, and more reliable. I work primarily in Python, JavaScript, and C#,
+    across backend, desktop, and web application development.
+  - >
+    In practice that's meant projects like building a custom image generation tool for a medical
+    technology client who needed synthetic training data for their algorithm — they arrived
+    without knowing exactly what they needed, and we worked backwards from the problem together.
+    Or scoping and leading development on a desktop application for local AI deployment,
+    managing a shifting feature list and making the prioritization calls that shaped the final
+    product. The problems look different every time, but the shape of the work is usually the
+    same: start with ambiguity, end with something that works.
+  - >
+    Alongside consulting, I build my own software under Moonspire Labs — tools that sit at the
+    intersection of technology and creativity, mostly for people who want to engage more
+    deliberately with the things they care about. (See the <a href="/products/">Products page</a>.)
+    I also co-founded <a href="#">Wildethorn Studios</a>, an indie game studio where I serve as
+    lead developer.
 
 cta:
-  header: Let's Work Together
-  text: If you're building something and need help moving from concept to working software, let's talk.
-  note: '**Not sure if your project fits?** Reach out anyway. If I''m not the right fit, I''ll try to point you in a better direction.'
+  header: Got a project?
+  text: Got a project that sounds like something I'd find interesting? Reach out. I'm always happy to talk through what you're building.
+  button:
+    text: Get in touch
+    link: /contact/
 ---

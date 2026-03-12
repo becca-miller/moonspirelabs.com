@@ -13,37 +13,54 @@
 <section class="starling">
   <div class="container">
     <h2 class="section-header">{{ starling.header }}</h2>
-    <h3 class="starling__tagline">{{ starling.tagline }}</h3>
-    
-    <p>{{ starling.intro }}</p>
-    
-    <h4>{{ starling.how_it_works.header }}</h4>
-    <ul>
-      {% for feature in starling.how_it_works.features %}
-        <li>{{ feature }}</li>
-      {% endfor %}
-    </ul>
-    
-    <p>{{ starling.philosophy }}</p>
+    <p class="starling__tagline"><strong>{{ starling.tagline }}</strong></p>
+
+    <p>{{ starling.description }}</p>
+    <p>{{ starling.how_it_works }}</p>
+    <p><strong>{{ starling.platforms }}</strong></p>
     <p><strong>Status:</strong> {{ starling.status }}</p>
   </div>
 </section>
 
-{# Future Products Section #}
-<section class="future-products">
-  <div class="container--narrow">
-    <h2 class="section-header">{{ future.header }}</h2>
-    <p>{{ future.text }}</p>
-  </div>
-</section>
+{# Newsletter CTA Section #}
+<section class="cta">
+  <div class="container">
+    <div class="content--medium">
+      <h2 class="cta__header">{{ cta.header }}</h2>
+      <p class="cta__text">{{ cta.text }}</p>
 
-{# Why Section #}
-<section class="why">
-  <div class="container--narrow">
-    <h2 class="section-header">{{ why.header }}</h2>
-    {% for paragraph in why.paragraphs %}
-      <p>{{ paragraph }}</p>
-    {% endfor %}
+      {# Mailchimp signup embed — replace the placeholder below with your Mailchimp embedded form code #}
+      <div class="newsletter-signup">
+        
+      <form action="https://moonspirelabs.us7.list-manage.com/subscribe/post?u=1f261c854dae712d6d582ad93&id=7828af096b&f_id=00b952e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>      
+        <!-- Honeypot field — do not remove -->
+        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+          <input type="text" name="b_1f261c854dae712d6d582ad93_7828af096b" tabindex="-1" value="">
+        </div>
+
+        <div class="newsletter-form">
+          <input 
+            type="email" 
+            name="EMAIL" 
+            id="mce-EMAIL" 
+            placeholder="your@email.com" 
+            required
+            autocomplete="email"
+          >
+          <button type="submit" name="subscribe" class="btn btn--primary">
+            Notify me
+          </button>
+        </div>
+
+        <div id="mce-responses">
+          <div id="mce-error-response" style="display: none;"></div>
+          <div id="mce-success-response" style="display: none;"></div>
+        </div>
+      </form>
+
+
+      </div>
+    </div>
   </div>
 </section>
 

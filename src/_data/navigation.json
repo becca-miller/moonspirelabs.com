@@ -5,16 +5,16 @@
 			"url": "/"
 		},
 		{
-			"text": "Consulting",
-			"url": "/consulting/"
-		},
-        {
 			"text": "Products",
 			"url": "/products/"
 		},
-        {
+		{
 			"text": "About",
 			"url": "/about/"
+		},
+		{
+			"text": "Contact",
+			"url": "/contact/"
 		}
 	]
 }
