@@ -5,7 +5,7 @@
   "main": ".eleventy.js",
   "scripts": {
     "start": "npx eleventy --serve",
-    "production": "NODE_ENV=production npx eleventy"
+    "build": "NODE_ENV=production npx eleventy"
   },
   "keywords": [],
   "author": "Becca Miller",
