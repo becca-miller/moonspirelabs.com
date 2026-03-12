@@ -14,7 +14,7 @@ bio:
     of college was in a hospital research department rather than a software company. I spent
     two years embedded in the anesthesiology department at Nationwide Children's Hospital —
     collaborating with clinicians, running statistical analysis, designing research methodology,
-    and contributing to published work. (Full publication list on <a href="https://orcid.org">ORCID</a>.)
+    and contributing to published work. (Full publication list on <a href="https://orcid.org/0000-0001-9629-4848">ORCID</a>.)
   - >
     From there I moved into software engineering proper, joining READY Robotics as a software
     engineer — and that's where my thinking about building things really changed. I'd spent
@@ -48,7 +48,7 @@ bio:
     Alongside consulting, I build my own software under Moonspire Labs — tools that sit at the
     intersection of technology and creativity, mostly for people who want to engage more
     deliberately with the things they care about. (See the <a href="/products/">Products page</a>.)
-    I also co-founded <a href="#">Wildethorn Studios</a>, an indie game studio where I serve as
+    I also co-founded <a href="https://wildethorn.com">Wildethorn Studios</a>, an indie game studio where I serve as
     lead developer.
 
 cta:

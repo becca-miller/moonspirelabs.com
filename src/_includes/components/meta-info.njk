@@ -1,31 +1,27 @@
-{% set pageTitle = title + ' - ' + site.name %}
 
-{# We don't want any duplication. This is likely for the home page. #}
-{% if site.name === title %} 
-  {% set pageTitle = title %}
+{# Home page: just site name. Others: 'Page - Site' #}
+{% if title|lower == 'home' or page.url == '/' or page.url == '/index.html' %}
+  <title>{{ site.name }}</title>
+  <meta property="og:title" content="{{ site.name }}" />
+{% else %}
+  <title>{{ title }} - {{ site.name }}</title>
+  <meta property="og:title" content="{{ title }} - {{ site.name }}" />
 {% endif %}
+<link rel="canonical" href="{{ currentUrl }}" />
 
-{% set siteTitle = site.name %}
-{% set currentUrl = site.url + page.url %}
+<meta property="og:site_name" content="{{ siteTitle }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ currentUrl }}" />
 
 {# If the page’s Front Matter has specific metaTitle and/or metaDesc items, switch 
   them into the mix. #}
 {% if metaTitle %}
-  {% set pageTitle = metaTitle %}
+  <meta property="og:title" content="{{ metaTitle }}" />
 {% endif %}
 
 {% if not metaDesc %}
-  {% set metaDesc = summary %}
+  {% set metaDesc = description %}
 {% endif %}
-
-
-<title>{{ pageTitle }}</title>
-<link rel="canonical" href="{{ currentUrl }}" />
-
-<meta property="og:site_name" content="{{ siteTitle }}" />
-<meta property="og:title" content="{{ pageTitle }}" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="{{ currentUrl }}" />
 
 {% if socialImage %}
   <meta name="twitter:card" content="summary_large_image" />

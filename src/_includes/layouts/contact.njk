@@ -12,7 +12,12 @@
 {# Contact Form Section #}
 <section class="contact-form">
   <div class="container container--narrow">
-    <form action="https://api.web3forms.com/submit" method="POST">
+
+    <div class="form-success" id="form-success" style="display:none" role="alert">
+      <p>Message sent! I'll get back to you within a few days.</p>
+    </div>
+
+    <form action="https://api.web3forms.com/submit" method="POST" id="contact-form">
     <input type="hidden" name="access_key" value="92b3a7f9-9a72-4e86-b6dd-93c1b0aadb7f">
       <div class="form-group">
         <label for="name">Name</label>
@@ -34,10 +39,38 @@
         <textarea id="message" name="message" rows="6" required></textarea>
       </div>
       <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-      <button type="submit" class="btn btn--primary btn--large">Send message</button>
-      <input type="hidden" name="redirect" value="https://moonspirelabs.com/contact?success=true">  
+      <button type="submit" id="submit-btn" class="btn btn--primary btn--large">Send message</button>
     </form>
   </div>
 </section>
+
+<script>
+  document.getElementById('contact-form').addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const form = e.target;
+    const btn = document.getElementById('submit-btn');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: new FormData(form)
+      });
+      const data = await res.json();
+      if (data.success) {
+        form.style.display = 'none';
+        document.getElementById('form-success').style.display = 'block';
+      } else {
+        btn.disabled = false;
+        btn.textContent = 'Send message';
+        alert('Something went wrong. Please try again or email directly.');
+      }
+    } catch (_) {
+      btn.disabled = false;
+      btn.textContent = 'Send message';
+      alert('Something went wrong. Please try again or email directly.');
+    }
+  });
+</script>
 
 {% endblock %}

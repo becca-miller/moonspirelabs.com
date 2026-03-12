@@ -686,6 +686,10 @@ form {
   max-width: 600px;
 }
 
+.form-group {
+  margin-bottom: var(--space-5);
+}
+
 label {
   display: block;
   font-weight: var(--weight-medium);
