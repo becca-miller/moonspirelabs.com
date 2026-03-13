@@ -2,48 +2,47 @@
 title: About
 layout: layouts/about.njk
 permalink: /about/
-description: "Becca Miller — nearly 10 years building software for clients, for myself, and for problems I couldn't stop thinking about."
+description: "Becca Miller. I've spent nearly 10 years building software for clients, for myself, and for problems I couldn't stop thinking about."
 
 hero:
   header: Becca Miller
-  subheader: I've spent nearly 10 years building software — for clients, for myself, and for problems I couldn't stop thinking about.
+  subheader: "I've spent nearly 10 years building software: for clients, for myself, and for problems I couldn't stop thinking about."
 
 bio:
   - >
-    I studied biomedical engineering at Johns Hopkins, which is probably why my first job out
+    I studied biomedical engineering at Johns Hopkins University, so my first job out
     of college was in a hospital research department rather than a software company. I spent
-    two years embedded in the anesthesiology department at Nationwide Children's Hospital —
+    two years working in the anesthesiology department at Nationwide Children's Hospital —
     collaborating with clinicians, running statistical analysis, designing research methodology,
     and contributing to published work. (Full publication list on <a href="https://orcid.org/0000-0001-9629-4848">ORCID</a>.)
   - >
     From there I moved into software engineering proper, joining READY Robotics as a software
-    engineer — and that's where my thinking about building things really changed. I'd spent
-    years writing research scripts with defined workflows and controlled conditions — code
-    that worked because the people using it were following a specific protocol. READY was my
-    first encounter with production software, and real users don't follow defined workflows.
-    They find every edge case you didn't anticipate, every path you assumed nobody would take.
+    engineer. That's where my thinking about building things really changed -- I'd spent
+    years writing research scripts with defined workflows and controlled conditions, and creating
+    code that worked because the people using it were following a specific protocol. READY was my
+    first encounter with production software. It turns out real users don't follow defined
+    workflows. Instead, they find every edge case you didn't anticipate, every path you assumed
+    nobody would take.
+    
     That's where I developed a deep instinct for QA, for predicting how things break, and for
     building software that holds up when people use it in ways you didn't expect. I also got
-    my first real taste of the full product cycle — hardware integration, translating wireframes
-    into working features, wearing a lot of hats in a small startup, and learning how to get
-    from "here's what we want" to "here's what we can actually build."
+    my first real taste of the full product cycle, including hardware integration, translating
+    wireframes into working features, and learning how to get from "here's what we want" to 
+    "here's what we can actually build."
   - >
     When I left READY, I didn't go looking for another full-time role. I wanted to build my
     own things and take on consulting work that let me keep doing both. That's still true
-    today — the consulting and the products are expressions of the same instinct. I'm most at
-    home when I'm figuring out what to build and then building it, especially when the problem
-    doesn't have an obvious answer yet. That instinct is also why I push back on AI as a
-    default answer — it's a powerful tool, but part of my job is knowing when something simpler
-    is faster, cheaper, and more reliable. I work primarily in Python, JavaScript, and C#,
+    today — my consulting work and the products I build are expressions of the same instinct.
+    I'm most at home when I'm figuring out what to build and then building it, especially when
+    the problem doesn't have an obvious answer yet. I work primarily in Python, JavaScript, and C#,
     across backend, desktop, and web application development.
   - >
-    In practice that's meant projects like building a custom image generation tool for a medical
-    technology client who needed synthetic training data for their algorithm — they arrived
-    without knowing exactly what they needed, and we worked backwards from the problem together.
-    Or scoping and leading development on a desktop application for local AI deployment,
-    managing a shifting feature list and making the prioritization calls that shaped the final
-    product. The problems look different every time, but the shape of the work is usually the
-    same: start with ambiguity, end with something that works.
+    My projects have ranged from building a custom image generation tool for a medical
+    technology client who needed synthetic training data for their algorithm to scoping and
+    leading development on a desktop application for local AI deployment. I've managed shifting
+    feature lists and made the prioritization calls that shaped final products. The problems
+    look different every time, but the shape of the work is usually the same: start with ambiguity,
+    end with something that works.
   - >
     Alongside consulting, I build my own software under Moonspire Labs — tools that sit at the
     intersection of technology and creativity, mostly for people who want to engage more
@@ -52,8 +51,8 @@ bio:
     lead developer.
 
 cta:
-  header: Got a project?
-  text: Got a project that sounds like something I'd find interesting? Reach out. I'm always happy to talk through what you're building.
+  header: Have a project in mind?
+  text:  Reach out. I'm always happy to talk through what you're building.
   button:
     text: Get in touch
     link: /contact/

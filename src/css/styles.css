@@ -469,6 +469,7 @@ section + section {
 }
 
 .main-nav a {
+  display: block;
   color: var(--teal-200);
   font-family: var(--font-ui);
   font-size: var(--text-base);
@@ -918,9 +919,11 @@ textarea {
   .hero    { padding: var(--space-20) 0 var(--space-16); }
 
   .header-content {
+    height: auto;
+    padding: var(--space-4) 0;
     flex-direction: column;
     align-items: flex-start;
-    gap: var(--space-6);
+    gap: var(--space-4);
   }
 
   .footer-content {

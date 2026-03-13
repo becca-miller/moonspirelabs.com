@@ -2,11 +2,11 @@
 title: Products
 layout: layouts/products.njk
 permalink: /products/
-description: Alongside consulting, I build independent software — technology that helps people reflect, create, and occasionally do something a little unexpected.
+description: "Alongside consulting, I build independent software: technology that helps people reflect, create, and occasionally do something a little unexpected."
 
 hero:
   header: Products
-  subheader: Alongside consulting, I build independent software. The common thread — technology that helps people reflect, create, and occasionally do something a little unexpected.
+  subheader: "Alongside consulting, I build independent software: technology that helps people reflect, create, and occasionally do something a little unexpected."
 
 starling:
   header: Starling
@@ -21,7 +21,7 @@ starling:
     or let it go. Over time, you build a curated library that reflects your actual taste,
     not an algorithm's guess at it.
   platforms: Available on Windows, macOS, and Linux.
-  status: "In active development — launching soon. Sign up below to be notified when it's available."
+  status: "In active development — launching soon. Sign up below to be notified when it's available!"
 
 cta:
   header: Stay in the loop
