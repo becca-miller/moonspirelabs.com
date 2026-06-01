@@ -6,7 +6,7 @@ description: I build custom software for research teams and R&D orgs.
 
 hero:
   header: I build custom software for research teams and R&D orgs.
-  subheader: From fragile prototype to something your whole team can use, without distorting the underlying work.
+  subheader: The underlying work is solid. I build the software that finally matches it.
   cta:
     text: Tell me what you're building
     link: /contact/
