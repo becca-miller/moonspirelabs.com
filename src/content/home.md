@@ -2,11 +2,11 @@
 title: Home
 layout: layouts/home.njk
 permalink: /
-description: I run a one-person software studio that helps early-stage teams figure out what to build — then build it.
+description: I build custom software for research teams and R&D orgs.
 
 hero:
-  header: I run a one-person software studio that helps early-stage teams figure out what to build — then build it.
-  subheader: Founders and researchers hire me when they know what they need to accomplish, but not how to get there.
+  header: I build custom software for research teams and R&D orgs.
+  subheader: From fragile prototype to something your whole team can use, without distorting the underlying work.
   cta:
     text: Tell me what you're building
     link: /contact/
@@ -14,35 +14,35 @@ hero:
 services:
   header: What I Do
   items:
-    - title: Early product development
-      subtitle: For teams building something new.
-      description: >
-        Most projects don't fail because of bad execution. They fail because nobody stopped
-        to figure out what to actually build. I work with early-stage teams who have something
-        real (an idea, a proof of concept, a rough prototype) but no clear path to a working
-        product. That means scoping what's realistic, validating technical approaches before
-        you're committed to them, and building systems that can grow without requiring a rewrite
-        six months later.
-      pricing: "Typical project range: $15–30k"
+    - title: Research and R&D Software
+      subtitle: For research teams and technical founders.
+      description: |
+        Research software has a way of working perfectly until someone else has to use it -- or until the person who built it leaves. If you have a working process, a prototype that proved the point, or code that's held together by institutional knowledge and good intentions, I can turn that into software that holds up: stable, documented, and usable by your whole team.
+        This might include:
 
-    - title: Research-to-software translation
-      subtitle: For research-driven teams.
-      description: >
-        Most research code works fine until someone else has to use it. If you have a working
-        experiment, a prototype that proved the point, or code that was never meant to leave
-        your machine, I can help turn that into software that holds up outside the lab. The
-        result is stable, maintainable, and accurate to the underlying work. The methodology
-        stays yours — I just make it possible for others to use it.
-      pricing: "Typical project range: $8–15k"
+        * Turning a manual or semi-manual research workflow into an automated, reliable pipeline
+        * Making a working prototype production-ready without distorting the underlying methodology
+        * Building tooling around an algorithm or process your team developed internally
+        * Scoping what a software solution should even look like when the path isn't obvious yet
+      pricing: "Typical project range: $8–30k depending on scope"
 
-    - title: Custom tools & automation
-      subtitle: For teams whose internal processes are starting to break down.
+    - title: Custom Internal Tools
+      subtitle: For teams whose processes have outgrown the workarounds.
+      description: |
+        At some point the spreadsheet that was "good enough for now" becomes a liability. I build internal tools for teams who've hit that wall -- replacing manual workflows, fragile scripts, and duct-taped processes with something reliable, documented, and built for the people who actually use it.
+        This might include:
+
+        * Internal dashboards and data tools
+        * Automation for repetitive or error-prone workflows
+        * Lightweight systems that replace manual handoffs or tracking processes
+      pricing: "Typical project range: $5–15k depending on scope"
+
+    - title: "\"I don't know what I need yet.\""
+      subtitle: For founders and teams with a real problem and no clear path to solving it.
       description: >
-        At some point, the spreadsheet that was "good enough for now" becomes a liability. I
-        build internal tools for teams who've hit that wall — replacing manual workflows,
-        fragile scripts, and duct-taped processes with something reliable, documented, and
-        built for the people who actually use it.
-      pricing: "Typical project range: $5–15k"
+        Sometimes the hardest part isn't building the software -- it's figuring out what to build in the first place. If you have a goal, a problem, or a rough idea but no clear picture of what a solution looks like, that's exactly where I start. I work backwards from what you're trying to accomplish to a concrete, buildable plan -- and then build it.
+        This is often where the most expensive mistakes get made, and where getting outside perspective early pays off the most.
+      pricing: "Typical project range: $5–30k (starts with a scoping engagement)"
 
 how_it_works:
   header: How It Works
@@ -62,16 +62,15 @@ how_it_works:
 who:
   header: Who I Work With
   items:
-    - "<strong>Early-stage founders</strong> who have something real but no clear path to building it yet."
-    - "<strong>Research teams</strong> with working experiments or prototypes that need to hold up outside the lab."
-    - "<strong>Small companies</strong> whose internal processes have outgrown the workarounds."
+    - <strong>Research teams and R&D orgs</strong> with working experiments, prototypes, or processes that need to hold up outside the lab.
+    - <strong>Technical founders</strong> who have a real problem but no clear path to a solution yet.
+    - <strong>Small technical teams</strong> whose internal processes have outgrown the workarounds.
   note: "<strong>Not sure if your project fits?</strong> Reach out anyway. If I'm not the right match, I'll try to point you somewhere better."
 
 cta:
   header: Not sure where to start?
   text: >
-    That's usually a good sign you're in the right place. Reach out and we'll figure out
-    whether I can help.
+    That's usually a good sign you're in the right place. Reach out and we'll figure out whether I can help.
   button:
     text: Get in touch
     link: /contact/

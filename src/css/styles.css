@@ -392,11 +392,11 @@ main {
    ====================================================== */
 
 section {
-  padding: var(--space-12) 0;
+  padding: var(--space-6) 0; /* Reduced from space-12 (48px) to space-6 (24px) */
 }
 
 section + section {
-  padding-top: var(--space-8);
+  padding-top: var(--space-4); /* Reduced from space-8 (32px) to space-4 (16px) */
 }
 
 .section--compact {
@@ -988,7 +988,7 @@ section { margin-bottom: 0; }
   font-size: var(--text-3xl);
   font-weight: var(--weight-semibold);
   color: var(--color-text);
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-4); /* Reduced from space-8 (32px) to space-4 (16px) */
   line-height: var(--leading-tight);
   letter-spacing: -0.02em;
 }

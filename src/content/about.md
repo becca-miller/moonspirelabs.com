@@ -10,7 +10,7 @@ hero:
 
 bio:
   - >
-    I studied biomedical engineering at Johns Hopkins University, so my first job out
+    I studied biomedical engineering at Johns Hopkins University, and my first job out
     of college was in a hospital research department rather than a software company. I spent
     two years working in the anesthesiology department at Nationwide Children's Hospital —
     collaborating with clinicians, running statistical analysis, designing research methodology,
@@ -18,10 +18,10 @@ bio:
   - >
     From there I moved into software engineering proper, joining READY Robotics as a software
     engineer. That's where my thinking about building things really changed -- I'd spent
-    years writing research scripts with defined workflows and controlled conditions, and creating
+    years writing research scripts with defined workflows and controlled conditions, and producing
     code that worked because the people using it were following a specific protocol. READY was my
     first encounter with production software. It turns out real users don't follow defined
-    workflows. Instead, they find every edge case you didn't anticipate, every path you assumed
+    workflows. Instead, they find every edge case you didn't anticipate, and every path you assumed
     nobody would take.
     
     That's where I developed a deep instinct for QA, for predicting how things break, and for
@@ -38,14 +38,14 @@ bio:
     across backend, desktop, and web application development.
   - >
     My projects have ranged from building a custom image generation tool for a medical
-    technology client who needed synthetic training data for their algorithm to scoping and
-    leading development on a desktop application for local AI deployment. I've managed shifting
-    feature lists and made the prioritization calls that shaped final products. The problems
-    look different every time, but the shape of the work is usually the same: start with ambiguity,
-    end with something that works.
+    technology client who needed synthetic testing data to scoping and leading development
+    on a desktop application for local AI deployment. I've managed shifting feature lists
+    and made the prioritization calls that shaped final products. The problems look different
+    every time, but the shape of the work is usually the same: start with ambiguity, and end 
+    ith something that works.
   - >
-    Alongside consulting, I build my own software under Moonspire Labs — tools that sit at the
-    intersection of technology and creativity, mostly for people who want to engage more
+    Alongside consulting, I build my own software under Moonspire Labs. I focus on creating tools
+    that sit at the intersection of technology and creativity, mostly for people who want to engage more
     deliberately with the things they care about. (See the <a href="/products/">Products page</a>.)
     I also co-founded <a href="https://wildethorn.com">Wildethorn Studios</a>, an indie game studio where I serve as
     lead developer.

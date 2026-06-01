@@ -1,3 +1,5 @@
+import markdownIt from "markdown-it";
+
 export default function(config) {
   // Passthrough static assets
   config.addPassthroughCopy("src/assets");
@@ -6,6 +8,11 @@ export default function(config) {
   // Reload CSS / assets during development
   config.setBrowserSyncConfig({
     files: ["_site/css/*.css", "_site/assets/**/*"]
+  });
+
+  const md = markdownIt();
+  config.addFilter("markdown", function(content) {
+    return md.render(content || "");
   });
 
   config.setUseGitIgnore(false);
@@ -20,3 +27,4 @@ export default function(config) {
     passthroughFileCopy: true
   };
 }
+
