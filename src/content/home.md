@@ -17,7 +17,7 @@ services:
     - title: Research and R&D Software
       subtitle: For research teams and technical founders.
       description: |
-        Most research code works fine until someone else has to use it, or until the person who wrote it leaves. If you have a working process, a prototype that proved the point, or code that was never meant to leave your machine, I can turn it into software that holds up. Stable, documented, and usable by your whole team. The methodology stays yours.
+        Most research code works fine until someone else has to use it. If you have a working process, a prototype that proved the point, or code that was never meant to leave your machine, I can turn it into software that's stable, documented, and usable by your whole team. The methodology stays yours.
 
         Typical work:
 
@@ -39,16 +39,14 @@ services:
     - title: "\"I don't know what I need yet.\""
       subtitle: For founders and teams with a real problem and no clear path to solving it.
       description: >
-        Most projects don't fail because of bad execution. They fail because nobody stopped to ask what should be built. If you have a goal, a problem, or a rough idea but no clear picture of the solution, that's where I start. I work backwards from what you're trying to accomplish to a concrete, buildable plan, then build it.
-        This is where the most expensive mistakes get made, and where an outside perspective pays off most.
+        Most projects don't fail just because of bad execution. They fail because nobody stopped to think through what should be built. If you have a goal, a problem, or a rough idea but no clear picture of the solution, that's where I start. I work backwards from what you're trying to accomplish to a concrete, buildable plan, then build it.
 
 how_it_works:
   header: How It Works
   text: >
     Every engagement starts with a paid scoping phase. Before any build work begins, we get
     clear on what problem you're actually trying to solve, what constraints you're working within,
-    and what a realistic path forward looks like. If you move forward, the scoping
-    fee is credited toward the project.
+    and what a realistic path forward looks like. If you move forward, the scoping fee is credited toward the project.
   text2: >
     Once the project is scoped, the build is fixed-price. You'll see working software
     throughout the process, not just at the end.
