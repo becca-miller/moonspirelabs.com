@@ -52,11 +52,6 @@ Stored in the `production` environment, which only `main` can deploy from.
 | `production` environment limited to `main` | applied 2026-09-30 |
 | `.claude/settings.json` agent rules | applied 2026-09-30 |
 
-## Manual steps outstanding
-
-- [ ] Create a deploy-only SSH key (`ssh-keygen -t ed25519 -f deploy_key -N "" -C github-deploy`) and append `deploy_key.pub` to the DreamHost user's `~/.ssh/authorized_keys`.
-- [ ] Set the five secrets in the `production` environment with `gh secret set NAME --env production`.
-
 ## Decisions and deviations
 
 - No versioned releases, tags, or release branches. The site deploys from `main` on every push, because it is a static site with a single live copy and no installed versions to track.
