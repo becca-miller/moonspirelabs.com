@@ -12,12 +12,12 @@ bio:
   - >
     I studied biomedical engineering at Johns Hopkins University, and my first job out
     of college was in a hospital research department rather than a software company. I spent
-    two years working in the anesthesiology department at Nationwide Children's Hospital —
+    two years working in the anesthesiology department at Nationwide Children's Hospital,
     collaborating with clinicians, running statistical analysis, designing research methodology,
     and contributing to published work. (Full publication list on <a href="https://orcid.org/0000-0001-9629-4848">ORCID</a>.)
   - >
     From there I moved into software engineering proper, joining READY Robotics as a software
-    engineer. That's where my thinking about building things really changed -- I'd spent
+    engineer. That's where my thinking about building things really changed. I'd spent
     years writing research scripts with defined workflows and controlled conditions, and producing
     code that worked because the people using it were following a specific protocol. READY was my
     first encounter with production software. It turns out real users don't follow defined
@@ -31,18 +31,17 @@ bio:
     "here's what we can actually build."
   - >
     When I left READY, I didn't go looking for another full-time role. I wanted to build my
-    own things and take on consulting work that let me keep doing both. That's still true
-    today — my consulting work and the products I build are expressions of the same instinct.
-    I'm most at home when I'm figuring out what to build and then building it, especially when
-    the problem doesn't have an obvious answer yet. I work primarily in Python, JavaScript, and C#,
-    across backend, desktop, and web application development.
+    own things and take on consulting work that let me keep doing both. I'm most at home when
+    I'm figuring out what to build and then building it, especially when the problem doesn't
+    have an obvious answer yet. I work primarily in Python, JavaScript, and C#, across backend,
+    desktop, and web application development.
   - >
     My projects have ranged from building a custom image generation tool for a medical
     technology client who needed synthetic testing data to scoping and leading development
     on a desktop application for local AI deployment. I've managed shifting feature lists
     and made the prioritization calls that shaped final products. The problems look different
-    every time, but the shape of the work is usually the same: start with ambiguity, and end 
-    ith something that works.
+    every time, but the shape of the work is usually the same: start with ambiguity, and end
+    with something that works.
   - >
     Alongside consulting, I build my own software under Moonspire Labs. I focus on creating tools
     that sit at the intersection of technology and creativity, mostly for people who want to engage more

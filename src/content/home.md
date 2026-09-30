@@ -2,11 +2,11 @@
 title: Home
 layout: layouts/home.njk
 permalink: /
-description: I build custom software for research teams and R&D orgs.
+description: I help research teams and R&D orgs figure out what to build, then build it.
 
 hero:
-  header: I build custom software for research teams and R&D orgs.
-  subheader: The underlying work is solid. I build the software that finally matches it.
+  header: I help research teams and R&D orgs figure out what to build, then build it.
+  subheader: Researchers and technical teams hire me when they know what they need to accomplish, but not how to get there.
   cta:
     text: Tell me what you're building
     link: /contact/
@@ -17,29 +17,30 @@ services:
     - title: Research and R&D Software
       subtitle: For research teams and technical founders.
       description: |
-        Research software has a way of working perfectly until someone else has to use it -- or until the person who built it leaves. If you have a working process, a prototype that proved the point, or code that's held together by institutional knowledge and good intentions, I can turn that into software that holds up: stable, documented, and usable by your whole team.
-        This might include:
+        Most research code works fine until someone else has to use it, or until the person who wrote it leaves. If you have a working process, a prototype that proved the point, or code that was never meant to leave your machine, I can turn it into software that holds up. Stable, documented, and usable by your whole team. The methodology stays yours.
 
-        * Turning a manual or semi-manual research workflow into an automated, reliable pipeline
-        * Making a working prototype production-ready without distorting the underlying methodology
-        * Building tooling around an algorithm or process your team developed internally
-        * Scoping what a software solution should even look like when the path isn't obvious yet
+        Typical work:
+
+        * Turning a manual research workflow into an automated, reliable pipeline
+        * Making a proven prototype production-ready without distorting the methodology
+        * Building tooling around an algorithm or process your team developed
 
     - title: Custom Internal Tools
       subtitle: For teams whose processes have outgrown the workarounds.
       description: |
-        At some point the spreadsheet that was "good enough for now" becomes a liability. I build internal tools for teams who've hit that wall -- replacing manual workflows, fragile scripts, and duct-taped processes with something reliable, documented, and built for the people who actually use it.
-        This might include:
+        At some point, the spreadsheet that was "good enough for now" becomes a liability. I build internal tools for teams who've hit that wall, replacing manual workflows, fragile scripts, and duct-taped processes with something reliable, documented, and built for the people who actually use it.
+
+        Typical work:
 
         * Internal dashboards and data tools
         * Automation for repetitive or error-prone workflows
-        * Lightweight systems that replace manual handoffs or tracking processes
+        * Lightweight systems that replace manual handoffs and tracking
 
     - title: "\"I don't know what I need yet.\""
       subtitle: For founders and teams with a real problem and no clear path to solving it.
       description: >
-        Sometimes the hardest part isn't building the software -- it's figuring out what to build in the first place. If you have a goal, a problem, or a rough idea but no clear picture of what a solution looks like, that's exactly where I start. I work backwards from what you're trying to accomplish to a concrete, buildable plan -- and then build it.
-        This is often where the most expensive mistakes get made, and where getting outside perspective early pays off the most.
+        Most projects don't fail because of bad execution. They fail because nobody stopped to ask what should be built. If you have a goal, a problem, or a rough idea but no clear picture of the solution, that's where I start. I work backwards from what you're trying to accomplish to a concrete, buildable plan, then build it.
+        This is where the most expensive mistakes get made, and where an outside perspective pays off most.
 
 how_it_works:
   header: How It Works
