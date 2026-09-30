@@ -24,7 +24,6 @@ services:
         * Making a working prototype production-ready without distorting the underlying methodology
         * Building tooling around an algorithm or process your team developed internally
         * Scoping what a software solution should even look like when the path isn't obvious yet
-      pricing: "Typical project range: $8–30k depending on scope"
 
     - title: Custom Internal Tools
       subtitle: For teams whose processes have outgrown the workarounds.
@@ -35,14 +34,12 @@ services:
         * Internal dashboards and data tools
         * Automation for repetitive or error-prone workflows
         * Lightweight systems that replace manual handoffs or tracking processes
-      pricing: "Typical project range: $5–15k depending on scope"
 
     - title: "\"I don't know what I need yet.\""
       subtitle: For founders and teams with a real problem and no clear path to solving it.
       description: >
         Sometimes the hardest part isn't building the software -- it's figuring out what to build in the first place. If you have a goal, a problem, or a rough idea but no clear picture of what a solution looks like, that's exactly where I start. I work backwards from what you're trying to accomplish to a concrete, buildable plan -- and then build it.
         This is often where the most expensive mistakes get made, and where getting outside perspective early pays off the most.
-      pricing: "Typical project range: $5–30k (starts with a scoping engagement)"
 
 how_it_works:
   header: How It Works

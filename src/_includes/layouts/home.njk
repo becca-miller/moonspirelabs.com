@@ -23,7 +23,6 @@
         <h3 class="service-card__title">{{ item.title }}</h3>
         <p class="service-card__subtitle"><em>{{ item.subtitle }}</em></p>
         <div class="service-card__description">{{ item.description | markdown | safe }}</div>
-        <p class="service-card__pricing"><em>{{ item.pricing }}</em></p>
       </article>
       {% endfor %}
     </div>

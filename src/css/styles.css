@@ -1037,15 +1037,6 @@ section { margin-bottom: 0; }
   color: var(--color-text);
 }
 
-.service__pricing {
-  margin-top: var(--space-6);
-  padding-top: var(--space-4);
-  border-top: 1px solid var(--grey-100);
-  color: var(--color-text-secondary);
-  font-size: var(--text-sm);
-  font-style: italic;
-}
-
 /* ===== Who I Work With ===== */
 .audiences {
   max-width: var(--container-wide);
