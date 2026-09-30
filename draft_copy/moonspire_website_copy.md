@@ -90,15 +90,21 @@ That's usually a good sign you're in the right place. Reach out and we'll figure
 
 ### Starling
 
-**A desktop app for people who actually want to know their music library.**
+**A home for music you'll love to return to.**
 
-Most music tools are built for passive listening. Starling is built for something different — for people with local music collections who want to stop accumulating files and start understanding what they actually like.
+Starling is a music library manager and player built for getting to know your music one song at a time. Go through your collection song by song, tag what stands out, and decide what's worth keeping. You'll build a curated library of songs you actually love, tagged with mood, energy, descriptive words, and whatever draws you in.
 
-The core loop is simple: import your library, listen to a small set of songs, answer a few guided questions about what you heard, and make a decision — keep it, skip it, or let it go. Over time, you build a curated library that reflects your actual taste, not an algorithm's guess at it.
+**Review your music**
 
-**Available on Windows, macOS, and Linux.**
+Each day, Starling prompts you to complete a Daily Review: a random batch of songs or, if you'd prefer, a random album. Each review asks a few optional questions about how a song feels and what draws you to it. The only required question is whether to add it to your curated library, or pass. You can also start your own reviews anytime, for a specific album or specific songs.
 
-**Status**: In active development — launching soon. Sign up below to be notified when it's available.
+**Listen to your library**
+
+As your curated library grows, you'll have a collection you can actually navigate. Filter by mood and energy, by descriptive words, and by what draws you to a song. Want something bright and upbeat? Find it. Looking for a dark, moody song with a catchy melody? You can filter for that, too.
+
+**Available for Windows and Linux.**
+
+**Buttons**: Get it on itch.io (https://moonspirelabs.itch.io/starling), Get it on Gumroad (https://moonspirelabs.gumroad.com/l/starling)
 
 ---
 
@@ -106,7 +112,7 @@ The core loop is simple: import your library, listen to a small set of songs, an
 
 **Stay in the loop**
 
-Sign up to hear about new product launches and updates:
+Sign up for Starling updates and future product launches:
 
 [Mailchimp signup embed]
 

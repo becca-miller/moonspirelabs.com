@@ -16,9 +16,19 @@
     <p class="starling__tagline"><strong>{{ starling.tagline }}</strong></p>
 
     <p>{{ starling.description }}</p>
-    <p>{{ starling.how_it_works }}</p>
+
+    <h3>{{ starling.review.header }}</h3>
+    <p>{{ starling.review.text }}</p>
+
+    <h3>{{ starling.listen.header }}</h3>
+    <p>{{ starling.listen.text }}</p>
+
     <p><strong>{{ starling.platforms }}</strong></p>
-    <p><strong>Status:</strong> {{ starling.status }}</p>
+
+    <div class="starling__links">
+      <a href="{{ starling.links.itch }}" class="btn btn--primary">Get it on itch.io</a>
+      <a href="{{ starling.links.gumroad }}" class="btn btn--secondary">Get it on Gumroad</a>
+    </div>
   </div>
 </section>
 
@@ -48,7 +58,7 @@
             autocomplete="email"
           >
           <button type="submit" name="subscribe" class="btn btn--primary">
-            Notify me
+            Subscribe
           </button>
         </div>
 
