@@ -19,7 +19,7 @@ services:
       description: |
         Most research code works fine until someone else has to use it. If you have a working process, a prototype that proved the point, or code that was never meant to leave your machine, I can turn it into software that's stable, documented, and usable by your whole team. The methodology stays yours.
 
-        Typical work:
+        For example:
 
         * Turning a manual research workflow into an automated, reliable pipeline
         * Making a proven prototype production-ready without distorting the methodology
@@ -30,7 +30,7 @@ services:
       description: |
         At some point, the spreadsheet that was "good enough for now" becomes a liability. I build internal tools for teams who've hit that wall, replacing manual workflows, fragile scripts, and duct-taped processes with something reliable, documented, and built for the people who actually use it.
 
-        Typical work:
+        For example:
 
         * Internal dashboards and data tools
         * Automation for repetitive or error-prone workflows
