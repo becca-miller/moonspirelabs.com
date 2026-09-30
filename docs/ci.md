@@ -46,15 +46,15 @@ Stored in the `production` environment, which only `main` can deploy from.
 
 | Protection | Status |
 |---|---|
-| Actions token read-only by default | pending |
-| Auto-delete merged branches | pending |
-| Ruleset: main | pending |
-| `production` environment limited to `main` | pending |
+| Actions token read-only by default | already set, confirmed 2026-09-30 |
+| Auto-delete merged branches | applied 2026-09-30 |
+| Ruleset: main (blocks force-push and deletion) | applied 2026-09-30 |
+| `production` environment limited to `main` | applied 2026-09-30 |
 | `.claude/settings.json` agent rules | applied 2026-09-30 |
 
 ## Manual steps outstanding
 
-- [ ] Create the deploy key and add its public half to the server (see setup commands in the session that added CI, or `ssh-keygen -t ed25519 -f deploy_key -N "" -C github-deploy`).
+- [ ] Create a deploy-only SSH key (`ssh-keygen -t ed25519 -f deploy_key -N "" -C github-deploy`) and append `deploy_key.pub` to the DreamHost user's `~/.ssh/authorized_keys`.
 - [ ] Set the five secrets in the `production` environment with `gh secret set NAME --env production`.
 
 ## Decisions and deviations
