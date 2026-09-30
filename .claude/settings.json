@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "deny": [
+      "Bash(git push *--force*)",
+      "Bash(git push -f*)",
+      "Bash(git push * -f*)",
+      "Bash(git push * +*)",
+      "Bash(git push *--mirror*)",
+      "Bash(git tag -d *)",
+      "Bash(git tag --delete *)",
+      "Bash(git tag -f *)",
+      "Bash(git tag --force *)",
+      "Bash(gh release delete *)",
+      "Bash(gh secret set *)",
+      "Bash(gh secret delete *)",
+      "Bash(gh repo delete *)"
+    ],
+    "ask": [
+      "Bash(git push)",
+      "Bash(git push *main*)",
+      "Bash(git push *--tags*)",
+      "Bash(git push *--follow-tags*)",
+      "Bash(git push *refs/tags/*)",
+      "Bash(git push *--delete*)",
+      "Bash(git push * -d *)",
+      "Bash(git push * :*)",
+      "Bash(git push *--prune*)",
+      "Bash(gh pr merge *)",
+      "Bash(gh workflow run *)",
+      "Edit(/.github/workflows/**)",
+      "Write(/.github/workflows/**)",
+      "Edit(/.claude/settings.json)",
+      "Write(/.claude/settings.json)"
+    ]
+  }
+}
