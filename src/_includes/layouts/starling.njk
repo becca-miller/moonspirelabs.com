@@ -24,11 +24,20 @@
   </div>
 </section>
 
+{# Feature band: how it works, the two features, and a closing call to action #}
+<div class="product-band">
+<section class="product-feature product-band__intro">
+  <div class="container container--medium">
+    <p class="eyebrow">{{ how_it_works.label }}</p>
+    <p class="product-band__lead">{{ how_it_works.lead }}</p>
+  </div>
+</section>
+
 {# Review Section #}
 <section class="product-feature">
   <div class="container container--medium">
     <h2 class="section-header">{{ review.header }}</h2>
-    <p>{{ review.text }}</p>
+    {{ review.text | markdown | safe }}
     {% set carousel = review.carousel %}
     {% include "components/carousel.njk" %}
   </div>
@@ -43,6 +52,30 @@
     {% include "components/carousel.njk" %}
   </div>
 </section>
+
+{# Features Section #}
+<section class="product-feature">
+  <div class="container container--medium">
+    <h2 class="section-header">{{ features.header }}</h2>
+    <ul>
+      {% for item in features.items %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+{# Closing Section #}
+<section class="product-feature product-closing">
+  <div class="container container--medium">
+    <p><strong>{{ closing.text }}</strong></p>
+    <div class="store-links">
+      <a href="{{ links.itch }}" class="btn btn--primary">Get it on itch.io</a>
+      <a href="{{ links.gumroad }}" class="btn btn--secondary">Get it on Gumroad</a>
+    </div>
+  </div>
+</section>
+</div>
 
 {# Newsletter CTA Section #}
 {% include "components/newsletter.njk" %}

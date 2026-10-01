@@ -1232,6 +1232,38 @@ section { margin-bottom: 0; }
   padding: var(--space-12) 0;
 }
 
+/* Background band that marks where the feature walkthrough starts */
+.product-band {
+  background: var(--color-bg-muted);
+  padding: var(--space-8) 0;
+}
+
+/* Keep the lead close to the first feature it introduces */
+.product-band__intro {
+  padding-bottom: 0;
+}
+
+.product-band__intro + .product-feature {
+  padding-top: 0;
+}
+
+.product-band__lead {
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  margin-bottom: 0;
+}
+
+/* Small all-caps label above a section */
+.eyebrow {
+  font-family: var(--font-ui);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: var(--space-3);
+}
+
 .product-intro p {
   font-size: var(--text-lg);
   line-height: var(--leading-relaxed);

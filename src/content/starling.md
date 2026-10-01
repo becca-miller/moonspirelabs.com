@@ -17,14 +17,23 @@ intro:
     decide what's worth keeping. You'll build a curated library of songs you actually love,
     tagged with mood, energy, descriptive words, and whatever draws you in.
 
+how_it_works:
+  label: How it works
+  lead: >
+    Start by importing your music library. From there, you can complete a review or jump
+    straight into your library to start listening.
+
 review:
   header: Review your music
-  text: >
-    Each day, Starling prompts you to complete a Daily Review: a random batch of songs or,
-    if you'd prefer, a random album. Each review asks a few optional questions about how a
-    song feels and what draws you to it. The only required question is whether to add it
-    to your curated library, or pass. You can also start your own reviews anytime, for a
-    specific album or specific songs.
+  text: |
+    Each day, Starling prompts you to complete a Daily Review, a random batch of songs or,
+    if you'd prefer, a random album. Each review asks a few optional questions: how gentle
+    or intense the song feels, how dark or bright, what words describe it, and what actually
+    draws you to it (the vocals? the lyrics? the instrumentation?). The only required
+    question is the last one: whether to add a song to your curated library, or pass.
+
+    You can also start your own reviews whenever you'd like. Review a specific album all in
+    one sitting, or jump to specific songs you want to review.
   carousel:
     label: Review screenshots
     narrow: true
@@ -56,6 +65,21 @@ listen:
         width: 1600
         height: 982
         alt: "Starling library view with filters open for mood, energy, what draws you, and descriptive words, above a list of curated songs"
+
+features:
+  header: Features
+  items:
+    - "Import your local library (MP3, FLAC, M4A, WAV, and OGG files are all supported)"
+    - Start a Daily Review, prompted once a day, for a random set of songs or a random album
+    - Start custom reviews anytime for a specific album, specific songs, or another random batch
+    - Review songs one at a time, tagging mood, energy, descriptive words, and what draws you in
+    - Decide what belongs in your curated library as you review
+    - Add or edit a song's tags right from your library, without opening a full review flow
+    - Browse curated, unreviewed, and full library views, and filter or search by mood, energy, descriptors, and more
+    - Build playlists and listen to your music collection through a queue-based player
+
+closing:
+  text: Ready to try it? Starling is available for Windows and Linux.
 
 platforms: Available for Windows and Linux.
 links:
