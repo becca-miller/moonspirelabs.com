@@ -77,21 +77,20 @@
 }
 
 :root {
-  /* ===== Teal Scale (primary) ===== */
-  --teal-50:  hsl(185, 50%, 96%);
-  --teal-100: hsl(185, 48%, 90%);
-  --teal-200: hsl(185, 46%, 78%);
+  /* ===== Teal Scale (primary) =====
+     Hue drifts slightly cooler toward the dark end; 900 and 950 are the
+     header, hero, footer, and CTA card surfaces. */
+  --teal-50:  hsl(185, 55%, 96%);
+  --teal-100: hsl(185, 52%, 90%);
+  --teal-200: hsl(185, 48%, 78%);
   --teal-300: hsl(185, 50%, 62%);
   --teal-400: hsl(185, 52%, 52%);
-  --teal-500: hsl(185, 55%, 45%);   /* mid-range teal — accents, highlights */
-  --teal-600: hsl(185, 50%, 38%);
-  --teal-700: hsl(185, 45%, 35%);   /* deep muted teal — primary structural */
-  --teal-800: hsl(185, 42%, 28%);
-  --teal-900: hsl(185, 40%, 20%);
-
-  /* ===== Dark Teal (hero / header) ===== */
-  --dark-teal: hsl(190, 30%, 12%);
-  --dark-teal-lighter: hsl(190, 28%, 18%);
+  --teal-500: hsl(185, 55%, 45%);   /* decorative accents only: fails text contrast on light */
+  --teal-600: hsl(186, 55%, 37%);   /* focus rings and other non-text indicators */
+  --teal-700: hsl(187, 52%, 31%);   /* primary, links */
+  --teal-800: hsl(188, 50%, 25%);
+  --teal-900: hsl(189, 34%, 18%);
+  --teal-950: hsl(190, 32%, 12%);
 
   /* ===== Amber / Golden Yellow (accent — use sparingly) ===== */
   --amber-50:  hsl(38, 100%, 96%);
@@ -106,10 +105,10 @@
   --grey-50:  hsl(40, 20%, 97%);    /* warm off-white background */
   --grey-100: hsl(38, 16%, 93%);
   --grey-200: hsl(36, 14%, 86%);
-  --grey-300: hsl(34, 12%, 76%);
-  --grey-400: hsl(32, 10%, 60%);
-  --grey-500: hsl(30, 8%,  46%);
-  --grey-600: hsl(28, 10%, 36%);
+  --grey-300: hsl(34, 12%, 70%);
+  --grey-400: hsl(32, 10%, 52%);    /* lightest grey that meets 3:1 for borders and indicators */
+  --grey-500: hsl(30, 8%,  42%);    /* lightest grey that meets 4.5:1 for text */
+  --grey-600: hsl(28, 10%, 34%);
   --grey-700: hsl(26, 12%, 26%);
   --grey-800: hsl(24, 14%, 18%);
   --grey-900: hsl(22, 16%, 12%);
@@ -122,25 +121,37 @@
 
   --color-text:            var(--grey-900);
   --color-text-secondary:  var(--grey-600);
-  --color-text-tertiary:   var(--grey-400);
+  --color-text-tertiary:   var(--grey-500);
 
   --color-border:          var(--grey-200);
   --color-border-subtle:   var(--grey-100);
+  --color-border-input:    var(--grey-400);
 
   /* Primary = deep muted teal */
   --color-primary:         var(--teal-700);
   --color-primary-hover:   var(--teal-800);
   --color-primary-light:   var(--teal-50);
 
-  /* Accent = mid-range teal (highlights, links, hover states) */
+  /* Dark surfaces: header, hero, footer, CTA card */
+  --color-surface-dark:       var(--teal-950);
+  --color-surface-dark-raised: var(--teal-900);
+
+  /* Links */
+  --color-link:            var(--teal-700);
+  --color-link-hover:      var(--teal-800);
+
+  /* Accent = mid-range teal, decorative only (borders, list markers) */
   --color-accent:          var(--teal-500);
-  --color-accent-hover:    var(--teal-600);
   --color-accent-light:    var(--teal-100);
+
+  /* Focus ring: teal on light surfaces, amber on dark ones */
+  --color-focus:           var(--teal-600);
+  --color-focus-on-dark:   var(--amber-300);
 
   /* CTA = amber (buttons, sparingly) */
   --color-cta:             var(--amber-400);
   --color-cta-hover:       var(--amber-500);
-  --color-cta-text:        var(--dark-teal);   /* dark text on amber for contrast */
+  --color-cta-text:        var(--teal-950);   /* dark text on amber for contrast */
 
   /* ===== Spacing Scale (base 4px) ===== */
   --space-1:  4px;
@@ -156,6 +167,9 @@
   --space-20: 80px;
   --space-24: 96px;
   --space-32: 128px;
+
+  /* Vertical padding on every page section; adjacent sections sit two of these apart */
+  --section-space: var(--space-12);
 
   /* ===== Shadow System ===== */
   --shadow-1:
@@ -220,7 +234,8 @@
   /* ===== Layout ===== */
   --container-wide:   1200px;
   --container-medium: 900px;
-  --container-narrow: 680px;
+  --container-narrow: 640px;
+  --container-compact: 480px;
   --container-text:   65ch;
 
   /* ===== Transitions ===== */
@@ -242,15 +257,42 @@
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scrollbar-color: var(--grey-400) transparent;
 }
 
+/* Column layout keeps the footer at the bottom of short pages */
 body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   font-family: var(--font-sans);
   font-size: var(--text-base);
   font-weight: var(--weight-normal);
   line-height: var(--leading-normal);
   color: var(--color-text);
   background: var(--color-bg);
+}
+
+::selection {
+  color: var(--color-text);
+  background: var(--teal-200);
+}
+
+/* Keyboard focus: a visible ring on every interactive element */
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.site-header :focus-visible,
+.site-footer :focus-visible,
+.hero :focus-visible,
+.cta :focus-visible {
+  outline-color: var(--color-focus-on-dark);
+}
+
+main:focus {
+  outline: none;
 }
 
 /* ======================================================
@@ -333,14 +375,14 @@ p {
 
 /* ===== Links ===== */
 a {
-  color: var(--color-accent);
+  color: var(--color-link);
   text-decoration: none;
   transition: color var(--transition-fast);
   font-weight: var(--weight-medium);
 }
 
 a:hover {
-  color: var(--color-accent-hover);
+  color: var(--color-link-hover);
 }
 
 p a,
@@ -353,7 +395,7 @@ li a {
 
 p a:hover,
 li a:hover {
-  text-decoration-color: var(--color-accent);
+  text-decoration-color: var(--color-link);
 }
 
 /* ======================================================
@@ -383,6 +425,18 @@ li a:hover {
   max-width: var(--container-medium);
 }
 
+.content--narrow {
+  max-width: var(--container-narrow);
+}
+
+/* The last block in a column adds no margin below it, so a section's
+   bottom padding alone sets the gap to the next section */
+.container > :last-child,
+.content--medium > :last-child,
+.content--narrow > :last-child {
+  margin-bottom: 0;
+}
+
 main {
   flex: 1;
 }
@@ -391,12 +445,15 @@ main {
    Sections
    ====================================================== */
 
+/* Sections own the vertical rhythm: headings inside them have no top margin,
+   so the gap between any two sections is always 2 x --section-space. The first
+   section after a hero gets a little extra room below the dark band. */
 section {
-  padding: var(--space-6) 0; /* Reduced from space-12 (48px) to space-6 (24px) */
+  padding: var(--section-space) 0;
 }
 
-section + section {
-  padding-top: var(--space-4); /* Reduced from space-8 (32px) to space-4 (16px) */
+.hero + section {
+  padding-top: var(--space-16);
 }
 
 .section--compact {
@@ -433,7 +490,7 @@ section + section {
 }
 
 .site-header {
-  background: var(--dark-teal);
+  background: var(--color-surface-dark);
   color: var(--grey-50);
   border-bottom: 1px solid var(--teal-900);
   box-shadow: var(--shadow-1);
@@ -486,9 +543,10 @@ section + section {
   border-radius: var(--radius-md);
 }
 
-.main-nav a:hover {
+.main-nav a:hover,
+.main-nav a[aria-current="page"] {
   color: var(--grey-50);
-  background: var(--dark-teal-lighter);
+  background: var(--color-surface-dark-raised);
 }
 
 /* Submenu: opens on hover or keyboard focus on desktop, hidden on mobile
@@ -508,7 +566,7 @@ section + section {
   align-items: stretch;
   gap: 0;
   padding: var(--space-2);
-  background: var(--dark-teal);
+  background: var(--color-surface-dark);
   border: 1px solid var(--teal-900);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-2);
@@ -524,7 +582,7 @@ section + section {
    ====================================================== */
 
 .site-footer {
-  background: var(--dark-teal);
+  background: var(--color-surface-dark);
   color: var(--grey-200);
   padding: var(--space-12) 0;
   font-size: var(--text-sm);
@@ -572,7 +630,7 @@ section + section {
 .btn--primary {
   background: var(--color-cta);
   color: var(--color-cta-text);
-  padding: 12px 28px;
+  padding: var(--space-3) var(--space-6);
   box-shadow: var(--shadow-1);
   letter-spacing: 0.01em;
 }
@@ -584,18 +642,19 @@ section + section {
   color: var(--color-cta-text);
 }
 
-/* Secondary — teal outline */
+/* Secondary — teal outline. The outline is an inset shadow rather than a
+   border so the button is the same size as a primary one with the same padding. */
 .btn--secondary {
   background: transparent;
   color: var(--color-primary);
-  padding: 11px 27px;
-  border: 2px solid var(--color-primary);
+  padding: var(--space-3) var(--space-6);
+  box-shadow: inset 0 0 0 2px var(--color-primary);
 }
 
 .btn--secondary:hover {
   background: var(--teal-50);
-  border-color: var(--color-accent);
-  color: var(--color-accent);
+  box-shadow: inset 0 0 0 2px var(--color-primary-hover);
+  color: var(--color-primary-hover);
   transform: translateY(-1px);
 }
 
@@ -603,7 +662,7 @@ section + section {
 .btn--tertiary {
   background: transparent;
   color: var(--color-text-secondary);
-  padding: 12px 24px;
+  padding: var(--space-3) var(--space-6);
 }
 
 .btn--tertiary:hover {
@@ -613,12 +672,12 @@ section + section {
 
 /* Button Sizes */
 .btn--small {
-  padding: 8px 16px;
+  padding: var(--space-2) var(--space-4);
   font-size: var(--text-sm);
 }
 
 .btn--large {
-  padding: 16px 36px;
+  padding: var(--space-4) var(--space-8);
   font-size: var(--text-lg);
 }
 
@@ -718,7 +777,7 @@ li::marker {
    ====================================================== */
 
 form {
-  max-width: 600px;
+  max-width: var(--container-narrow);
 }
 
 .form-group {
@@ -743,8 +802,8 @@ input[type="number"],
 textarea,
 select {
   width: 100%;
-  padding: 10px 12px;
-  border: 1px solid var(--grey-300);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border-input);
   border-radius: var(--radius-md);
   font-family: var(--font-sans);
   font-size: var(--text-base);
@@ -758,17 +817,17 @@ input:focus,
 textarea:focus,
 select:focus {
   outline: none;
-  border-color: var(--color-accent);
+  border-color: var(--color-focus);
   box-shadow: 0 0 0 3px var(--teal-100);
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: var(--grey-400);
+  color: var(--color-text-tertiary);
 }
 
 textarea {
-  min-height: 120px;
+  min-height: var(--space-32);
   resize: vertical;
 }
 
@@ -777,7 +836,7 @@ textarea {
    ====================================================== */
 
 .hero {
-  background: linear-gradient(165deg, var(--dark-teal) 0%, var(--dark-teal-lighter) 100%);
+  background: linear-gradient(165deg, var(--color-surface-dark) 0%, var(--color-surface-dark-raised) 100%);
   color: var(--grey-50);
   padding: var(--space-32) 0 var(--space-24);
   position: relative;
@@ -811,14 +870,14 @@ textarea {
   font-size: var(--text-6xl);
   line-height: 1.1;
   margin-bottom: var(--space-8);
-  max-width: 900px;
+  max-width: var(--container-medium);
 }
 
 .hero p {
   font-size: var(--text-xl);
   line-height: var(--leading-relaxed);
   color: var(--teal-200);
-  max-width: 700px;
+  max-width: var(--container-text);
 }
 
 .hero a {
@@ -834,7 +893,7 @@ textarea {
 }
 
 .hero .btn--primary {
-  color: var(--dark-teal);
+  color: var(--color-surface-dark);
 }
 
 .hero--compact {
@@ -874,7 +933,7 @@ textarea {
 
 .text-muted    { color: var(--color-text-secondary); }
 .text-tertiary { color: var(--color-text-tertiary); }
-.text-accent   { color: var(--color-accent); }
+.text-accent   { color: var(--color-link); }
 .text-center   { text-align: center; }
 .text-right    { text-align: right; }
 
@@ -928,10 +987,6 @@ textarea {
   .container {
     padding: 0 var(--space-6);
   }
-
-  section {
-    padding: var(--space-20) 0;
-  }
 }
 
 @media (max-width: 768px) {
@@ -940,6 +995,7 @@ textarea {
     --text-5xl: 2rem;
     --text-4xl: 1.75rem;
     --text-3xl: 1.5rem;
+    --section-space: var(--space-8);
   }
 
   .container {
@@ -987,7 +1043,7 @@ textarea {
     gap: var(--space-4);
   }
 
-  section            { padding: var(--space-10) 0; }
+  .hero + section    { padding-top: var(--space-12); }
   .content-section   { padding: var(--space-12) 0; }
   .content-section:first-of-type { padding-top: var(--space-16); }
 }
@@ -1027,12 +1083,14 @@ textarea {
 /* ===== Section Headers ===== */
 section { margin-bottom: 0; }
 
+/* The section's padding sets the space above, so the heading adds none */
 .section-header {
   font-family: var(--font-heading);
   font-size: var(--text-3xl);
   font-weight: var(--weight-semibold);
   color: var(--color-text);
-  margin-bottom: var(--space-4); /* Reduced from space-8 (32px) to space-4 (16px) */
+  margin-top: 0;
+  margin-bottom: var(--space-4);
   line-height: var(--leading-tight);
   letter-spacing: -0.02em;
 }
@@ -1041,7 +1099,6 @@ section { margin-bottom: 0; }
 .services {
   max-width: var(--container-wide);
   margin: 0 auto;
-  padding: var(--space-12) 0;
 }
 
 .services .section-header {
@@ -1096,9 +1153,9 @@ section { margin-bottom: 0; }
 /* ===== CTA Section ===== */
 .cta {
   max-width: var(--container-narrow);
-  margin: var(--space-16) auto;
+  margin: var(--section-space) auto;
   padding: var(--space-10) var(--space-12);
-  background: var(--dark-teal);
+  background: var(--color-surface-dark);
   border-radius: var(--radius-xl);
   text-align: center;
   box-shadow: var(--shadow-3);
@@ -1163,17 +1220,7 @@ section { margin-bottom: 0; }
 }
 
 /* ===== Products Page — Product Summary ===== */
-.product-summary {
-  padding: var(--space-12) 0;
-}
-
-/* Constrain the summary to the same outer width as the CTA card,
-   and let paragraphs fill the container (the global p max-width of 65ch
-   would otherwise make the text block narrower than the card). */
-.product-summary .container {
-  max-width: var(--container-narrow);
-}
-
+/* Paragraphs fill the narrow column instead of stopping at the global 65ch */
 .product-summary p {
   max-width: none;
 }
@@ -1184,11 +1231,6 @@ section { margin-bottom: 0; }
   margin-bottom: var(--space-6);
   font-weight: var(--weight-normal);
   font-style: italic;
-}
-
-/* Matches the h2 top margin that .product-title removes from the heading */
-.product-summary .product-title {
-  margin-top: var(--space-16);
 }
 
 .product-summary .btn {
@@ -1232,23 +1274,16 @@ section { margin-bottom: 0; }
   margin-top: var(--space-6);
 }
 
-.product-feature {
-  padding: var(--space-12) 0;
-}
-
-/* Background band that marks where the feature walkthrough starts */
+/* Background band that marks where the feature walkthrough starts;
+   its sections supply the padding inside it */
 .product-band {
   background: var(--color-bg-muted);
-  padding: var(--space-8) 0;
 }
 
-/* Keep the lead close to the first feature it introduces */
+/* Keep the lead closer to the first feature it introduces than the
+   features are to each other */
 .product-band__intro {
   padding-bottom: 0;
-}
-
-.product-band__intro + .product-feature {
-  padding-top: 0;
 }
 
 .product-band__lead {
@@ -1292,7 +1327,7 @@ section { margin-bottom: 0; }
 
 /* Tall screenshots would be taller than a laptop screen at full column width */
 .carousel--narrow {
-  max-width: 640px;
+  max-width: var(--container-narrow);
 }
 
 .carousel__track {
@@ -1309,7 +1344,7 @@ section { margin-bottom: 0; }
 }
 
 .carousel__track:focus-visible {
-  outline: 2px solid var(--color-accent);
+  outline: 2px solid var(--color-focus);
   outline-offset: 4px;
 }
 
@@ -1338,9 +1373,9 @@ section { margin-bottom: 0; }
 }
 
 .carousel__arrow {
-  width: 40px;
-  height: 40px;
-  border: 1px solid var(--grey-300);
+  width: var(--space-10);
+  height: var(--space-10);
+  border: 1px solid var(--color-border-input);
   border-radius: var(--radius-full);
   background: var(--color-surface);
   color: var(--color-text);
@@ -1366,8 +1401,8 @@ section { margin-bottom: 0; }
 
 /* 24px hit area around an 8px dot */
 .carousel__dot {
-  width: 24px;
-  height: 24px;
+  width: var(--space-6);
+  height: var(--space-6);
   padding: 0;
   border: none;
   background: none;
@@ -1377,16 +1412,18 @@ section { margin-bottom: 0; }
 .carousel__dot::before {
   content: '';
   display: block;
-  width: 8px;
-  height: 8px;
+  width: var(--space-2);
+  height: var(--space-2);
   margin: auto;
   border-radius: var(--radius-full);
   background: var(--grey-400);
-  transition: background var(--transition-fast);
+  transition: background var(--transition-fast), width var(--transition-fast);
 }
 
+/* The current dot is wider as well as colored, so it doesn't rely on color alone */
 .carousel__dot[aria-current="true"]::before {
-  background: var(--color-accent);
+  width: var(--space-4);
+  background: var(--color-primary);
 }
 
 /* ===== About Page — Background ===== */
@@ -1408,14 +1445,12 @@ section { margin-bottom: 0; }
 @media (max-width: 768px) {
   .cta {
     padding: var(--space-8);
-    margin: var(--space-12) auto;
+    margin: var(--section-space) var(--space-4);
   }
 
   .cta__header { font-size: var(--text-xl); }
   .service-card { padding-left: var(--space-4); }
   .hero .product-title__icon { width: 56px; height: 56px; }
-  .product-summary .product-title { margin-top: var(--space-12); }
-  .product-feature { padding: var(--space-8) 0; }
 }
 /* ======================================================
    Newsletter styling
@@ -1424,7 +1459,7 @@ section { margin-bottom: 0; }
 .newsletter-form {
   display: flex;
   gap: var(--space-3);
-  max-width: 480px;
+  max-width: var(--container-compact);
   margin: 0 auto; /* center within the CTA card */
 }
 
