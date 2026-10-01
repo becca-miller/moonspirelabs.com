@@ -10,68 +10,23 @@
 </section>
 
 {# Starling Section #}
-<section class="starling">
+<section class="product-summary">
   <div class="container">
-    <h2 class="section-header">{{ starling.header }}</h2>
-    <p class="starling__tagline"><strong>{{ starling.tagline }}</strong></p>
-
-    <p>{{ starling.description }}</p>
-
-    <h3>{{ starling.review.header }}</h3>
-    <p>{{ starling.review.text }}</p>
-
-    <h3>{{ starling.listen.header }}</h3>
-    <p>{{ starling.listen.text }}</p>
-
-    <p><strong>{{ starling.platforms }}</strong></p>
-
-    <div class="starling__links">
+    <div class="product-title">
+      <img src="/assets/starling/starling-icon.webp" alt="" width="56" height="56" class="product-title__icon">
+      <h2 class="section-header">{{ starling.header }}</h2>
+    </div>
+    <p class="product-summary__tagline"><strong>{{ starling.tagline }}</strong></p>
+    <p>{{ starling.summary }}</p>
+    <div class="store-links">
       <a href="{{ starling.links.itch }}" class="btn btn--primary">Get it on itch.io</a>
       <a href="{{ starling.links.gumroad }}" class="btn btn--secondary">Get it on Gumroad</a>
+      <a href="/starling/" class="btn btn--tertiary">Learn more</a>
     </div>
   </div>
 </section>
 
 {# Newsletter CTA Section #}
-<section class="cta">
-  <div class="container">
-    <div class="content--medium">
-      <h2 class="cta__header">{{ cta.header }}</h2>
-      <p class="cta__text">{{ cta.text }}</p>
-
-      {# Mailchimp signup embed — replace the placeholder below with your Mailchimp embedded form code #}
-      <div class="newsletter-signup">
-        
-      <form action="https://moonspirelabs.us7.list-manage.com/subscribe/post?u=1f261c854dae712d6d582ad93&id=7828af096b&f_id=00b952e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>      
-        <!-- Honeypot field — do not remove -->
-        <div style="position: absolute; left: -5000px;" aria-hidden="true">
-          <input type="text" name="b_1f261c854dae712d6d582ad93_7828af096b" tabindex="-1" value="">
-        </div>
-
-        <div class="newsletter-form">
-          <input 
-            type="email" 
-            name="EMAIL" 
-            id="mce-EMAIL" 
-            placeholder="your@email.com" 
-            required
-            autocomplete="email"
-          >
-          <button type="submit" name="subscribe" class="btn btn--primary">
-            Subscribe
-          </button>
-        </div>
-
-        <div id="mce-responses">
-          <div id="mce-error-response" style="display: none;"></div>
-          <div id="mce-success-response" style="display: none;"></div>
-        </div>
-      </form>
-
-
-      </div>
-    </div>
-  </div>
-</section>
+{% include "components/newsletter.njk" %}
 
 {% endblock %}

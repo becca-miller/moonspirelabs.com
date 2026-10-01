@@ -1129,23 +1129,23 @@ section { margin-bottom: 0; }
   border-left: 3px solid var(--color-accent);
 }
 
-/* ===== Products Page — Starling ===== */
-.starling {
+/* ===== Products Page — Product Summary ===== */
+.product-summary {
   padding: var(--space-12) 0;
 }
 
-/* Constrain Starling content to the same outer width as the CTA card,
+/* Constrain the summary to the same outer width as the CTA card,
    and let paragraphs fill the container (the global p max-width of 65ch
    would otherwise make the text block narrower than the card). */
-.starling .container {
+.product-summary .container {
   max-width: var(--container-narrow);
 }
 
-.starling p {
+.product-summary p {
   max-width: none;
 }
 
-.starling__tagline {
+.product-summary__tagline {
   font-size: var(--text-xl);
   color: var(--color-text-secondary);
   margin-bottom: var(--space-6);
@@ -1153,11 +1153,85 @@ section { margin-bottom: 0; }
   font-style: italic;
 }
 
-.starling__links {
+/* Matches the h2 top margin that .product-title removes from the heading */
+.product-summary .product-title {
+  margin-top: var(--space-16);
+}
+
+/* ===== Product Page (Starling) ===== */
+/* Product icon beside the product name; the heading's own margins are dropped
+   so the icon centers on the text */
+.product-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.product-title h1,
+.product-title h2 {
+  margin: 0;
+}
+
+.product-title__icon {
+  flex-shrink: 0;
+  border-radius: var(--radius-lg);
+}
+
+.hero .product-title {
+  margin-bottom: var(--space-8);
+}
+
+.hero .product-title__icon {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-xl);
+}
+
+.store-links {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-4);
   margin-top: var(--space-6);
+}
+
+.hero .store-links .btn {
+  margin-top: 0;
+}
+
+/* The default teal outline is too dark to read on the hero background */
+.hero .btn--secondary {
+  color: var(--teal-200);
+  border-color: var(--teal-200);
+}
+
+.hero .btn--secondary:hover {
+  background: var(--dark-teal-lighter);
+  color: var(--grey-50);
+  border-color: var(--grey-50);
+}
+
+.product-feature {
+  padding: var(--space-12) 0;
+}
+
+.screenshot {
+  margin: var(--space-8) 0 0;
+}
+
+.screenshot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-3);
+}
+
+.screenshot-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  align-items: start;
 }
 
 /* ===== About Page — Background ===== */
@@ -1184,6 +1258,10 @@ section { margin-bottom: 0; }
 
   .cta__header { font-size: var(--text-xl); }
   .service-card { padding-left: var(--space-4); }
+  .screenshot-pair { grid-template-columns: 1fr; }
+  .hero .product-title__icon { width: 56px; height: 56px; }
+  .product-summary .product-title { margin-top: var(--space-12); }
+  .product-feature { padding: var(--space-8) 0; }
 }
 /* ======================================================
    Newsletter styling

@@ -1,0 +1,50 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+{# Hero Section #}
+<section class="hero">
+  <div class="container">
+    <div class="product-title">
+      <img src="/assets/starling/starling-icon.webp" alt="" width="96" height="96" class="product-title__icon">
+      <h1>{{ hero.header }}</h1>
+    </div>
+    <p class="large"><em>{{ hero.tagline }}</em></p>
+    <p>{{ hero.description }}</p>
+    <p><strong>{{ platforms }}</strong></p>
+    <div class="store-links">
+      <a href="{{ links.itch }}" class="btn btn--primary">Get it on itch.io</a>
+      <a href="{{ links.gumroad }}" class="btn btn--secondary">Get it on Gumroad</a>
+    </div>
+  </div>
+</section>
+
+{# Review Section #}
+<section class="product-feature">
+  <div class="container container--medium">
+    <h2 class="section-header">{{ review.header }}</h2>
+    <p>{{ review.text }}</p>
+    <div class="screenshot-pair">
+      {% for shot in review.screenshots %}
+      <figure class="screenshot">
+        <a href="{{ shot.src }}"><img src="{{ shot.src }}" alt="{{ shot.alt }}" width="{{ shot.width }}" height="{{ shot.height }}" loading="lazy"></a>
+      </figure>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# Listen Section #}
+<section class="product-feature">
+  <div class="container container--medium">
+    <h2 class="section-header">{{ listen.header }}</h2>
+    <p>{{ listen.text }}</p>
+    <figure class="screenshot">
+      <a href="{{ listen.screenshot.src }}"><img src="{{ listen.screenshot.src }}" alt="{{ listen.screenshot.alt }}" width="{{ listen.screenshot.width }}" height="{{ listen.screenshot.height }}" loading="lazy"></a>
+    </figure>
+  </div>
+</section>
+
+{# Newsletter CTA Section #}
+{% include "components/newsletter.njk" %}
+
+{% endblock %}
