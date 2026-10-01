@@ -1,0 +1,24 @@
+{#
+  Screenshot carousel. Swipe or scroll works without JavaScript;
+  /assets/js/carousel.js reveals the arrow and dot controls.
+  Expects: carousel.label (accessible name), carousel.shots (list of src, width, height, alt).
+  Optional: carousel.narrow caps the width for tall screenshots.
+#}
+<div class="carousel{% if carousel.narrow %} carousel--narrow{% endif %}" role="region" aria-roledescription="carousel" aria-label="{{ carousel.label }}">
+  <div class="carousel__track" tabindex="0">
+    {% for shot in carousel.shots %}
+    <figure class="carousel__slide screenshot" aria-roledescription="slide" aria-label="{{ loop.index }} of {{ carousel.shots | length }}">
+      <a href="{{ shot.src }}"><img src="{{ shot.src }}" alt="{{ shot.alt }}" width="{{ shot.width }}" height="{{ shot.height }}" loading="lazy"></a>
+    </figure>
+    {% endfor %}
+  </div>
+  <div class="carousel__controls" hidden>
+    <button type="button" class="carousel__arrow" data-dir="-1" aria-label="Previous screenshot">&#8592;</button>
+    <div class="carousel__dots">
+      {% for shot in carousel.shots %}
+      <button type="button" class="carousel__dot" aria-label="Show screenshot {{ loop.index }}"></button>
+      {% endfor %}
+    </div>
+    <button type="button" class="carousel__arrow" data-dir="1" aria-label="Next screenshot">&#8594;</button>
+  </div>
+</div>

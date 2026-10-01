@@ -1228,24 +1228,13 @@ section { margin-bottom: 0; }
   margin-top: var(--space-6);
 }
 
-.hero .store-links .btn {
-  margin-top: 0;
-}
-
-/* The default teal outline is too dark to read on the hero background */
-.hero .btn--secondary {
-  color: var(--teal-200);
-  border-color: var(--teal-200);
-}
-
-.hero .btn--secondary:hover {
-  background: var(--dark-teal-lighter);
-  color: var(--grey-50);
-  border-color: var(--grey-50);
-}
-
 .product-feature {
   padding: var(--space-12) 0;
+}
+
+.product-intro p {
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
 }
 
 .screenshot {
@@ -1260,11 +1249,108 @@ section { margin-bottom: 0; }
   box-shadow: var(--shadow-3);
 }
 
-.screenshot-pair {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-6);
-  align-items: start;
+/* Screenshot carousel: a scroll-snap track, with arrows and dots added by carousel.js */
+.carousel {
+  margin-top: var(--space-8);
+}
+
+/* Tall screenshots would be taller than a laptop screen at full column width */
+.carousel--narrow {
+  max-width: 640px;
+}
+
+.carousel__track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-3);
+}
+
+.carousel__track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel__track:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+.carousel__slide {
+  flex: 0 0 100%;
+  margin: 0;
+  scroll-snap-align: start;
+}
+
+/* The track carries the rounded corners and shadow for the whole carousel */
+.carousel__slide img {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.carousel__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.carousel__controls[hidden] {
+  display: none;
+}
+
+.carousel__arrow {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--grey-300);
+  border-radius: var(--radius-full);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: var(--text-lg);
+  line-height: 1;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.carousel__arrow:hover:not(:disabled) {
+  background: var(--grey-100);
+}
+
+.carousel__arrow:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.carousel__dots {
+  display: flex;
+  gap: var(--space-2);
+}
+
+/* 24px hit area around an 8px dot */
+.carousel__dot {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.carousel__dot::before {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin: auto;
+  border-radius: var(--radius-full);
+  background: var(--grey-400);
+  transition: background var(--transition-fast);
+}
+
+.carousel__dot[aria-current="true"]::before {
+  background: var(--color-accent);
 }
 
 /* ===== About Page — Background ===== */
@@ -1291,7 +1377,6 @@ section { margin-bottom: 0; }
 
   .cta__header { font-size: var(--text-xl); }
   .service-card { padding-left: var(--space-4); }
-  .screenshot-pair { grid-template-columns: 1fr; }
   .hero .product-title__icon { width: 56px; height: 56px; }
   .product-summary .product-title { margin-top: var(--space-12); }
   .product-feature { padding: var(--space-8) 0; }
