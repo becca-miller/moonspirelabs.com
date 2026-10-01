@@ -1191,6 +1191,10 @@ section { margin-bottom: 0; }
   margin-top: var(--space-16);
 }
 
+.product-summary .btn {
+  margin-top: var(--space-2);
+}
+
 /* ===== Product Page (Starling) ===== */
 /* Product icon beside the product name; the heading's own margins are dropped
    so the icon centers on the text */

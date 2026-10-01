@@ -14,8 +14,7 @@ starling:
   summary: >
     A music library manager and player built for getting to know your music one song at a
     time. Review your collection song by song, tag what stands out, and build a curated
-    library you can filter by mood, energy, and what draws you in. Available for Windows
-    and Linux.
+    library you can filter by mood, energy, and what draws you in.
   links:
     itch: https://moonspirelabs.itch.io/starling
     gumroad: https://moonspirelabs.gumroad.com/l/starling
