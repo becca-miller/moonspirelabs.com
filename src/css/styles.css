@@ -491,6 +491,34 @@ section + section {
   background: var(--dark-teal-lighter);
 }
 
+/* Submenu: opens on hover or keyboard focus on desktop, hidden on mobile
+   (the parent page links to its children instead) */
+.main-nav .has-submenu {
+  position: relative;
+}
+
+.main-nav .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  min-width: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  padding: var(--space-2);
+  background: var(--dark-teal);
+  border: 1px solid var(--teal-900);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-2);
+}
+
+.main-nav .has-submenu:hover .submenu,
+.main-nav .has-submenu:focus-within .submenu {
+  display: flex;
+}
+
 /* ======================================================
    Footer
    ====================================================== */
@@ -947,6 +975,11 @@ textarea {
 
   .main-nav a {
     padding: var(--space-2);
+  }
+
+  .main-nav .has-submenu:hover .submenu,
+  .main-nav .has-submenu:focus-within .submenu {
+    display: none;
   }
 
   .card-grid {

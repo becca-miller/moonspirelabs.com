@@ -6,7 +6,13 @@
 		},
 		{
 			"text": "Products",
-			"url": "/products/"
+			"url": "/products/",
+			"children": [
+				{
+					"text": "Starling",
+					"url": "/starling/"
+				}
+			]
 		},
 		{
 			"text": "About",
