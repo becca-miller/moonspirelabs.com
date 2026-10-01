@@ -61,7 +61,6 @@ who:
     - <strong>Research teams and R&D orgs</strong> with working experiments, prototypes, or processes that need to hold up outside the lab.
     - <strong>Technical founders</strong> who have a real problem but no clear path to a solution yet.
     - <strong>Small technical teams</strong> whose internal processes have outgrown the workarounds.
-  note: "<strong>Not sure if your project fits?</strong> Reach out anyway. If I'm not the right match, I'll try to point you somewhere better."
 
 cta:
   header: Not sure where to start?
