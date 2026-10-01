@@ -19,7 +19,7 @@ services:
       description: |
         Most research code works fine until someone else has to use it. If you have a working process, a prototype that proved the point, or code that was never meant to leave your machine, I can turn it into software that's stable, documented, and usable by your whole team. The methodology stays yours.
 
-        For example:
+        This could include:
 
         * Turning a manual research workflow into an automated, reliable pipeline
         * Making a proven prototype production-ready without distorting the methodology
@@ -30,11 +30,11 @@ services:
       description: |
         At some point, the spreadsheet that was "good enough for now" becomes a liability. I build internal tools for teams who've hit that wall, replacing manual workflows, fragile scripts, and duct-taped processes with something reliable, documented, and built for the people who actually use it.
 
-        For example:
+        This could include:
 
-        * Internal dashboards and data tools
-        * Automation for repetitive or error-prone workflows
-        * Lightweight systems that replace manual handoffs and tracking
+        * Building internal dashboards and data tools
+        * Automating repetitive or error-prone workflows
+        * Replacing manual handoffs and tracking with lightweight systems
 
     - title: "\"I don't know what I need yet.\""
       subtitle: For founders and teams with a real problem and no clear path to solving it.
@@ -44,28 +44,20 @@ services:
 how_it_works:
   header: How It Works
   text: >
-    Every engagement starts with a paid scoping phase. Before any build work begins, we get
-    clear on what problem you're actually trying to solve, what constraints you're working within,
-    and what a realistic path forward looks like. If you move forward, the scoping fee is credited toward the project.
+    Every engagement starts with a free discovery call. We'll talk through your project and
+    whether I'm the right fit for it, and if not, I can point you in the right direction.
   text2: >
+    Next is a paid scoping phase. Before any build work begins, we get clear on what problem
+    you're actually trying to solve, what constraints you're working within, and what a realistic
+    path forward looks like. If you move forward, the scoping fee is credited toward the project.
+  text3: >
     Once the project is scoped, the build is fixed-price. You'll see working software
     throughout the process, not just at the end.
-  text3: >
-    Want to talk through your project first? Every engagement starts with a free discovery
-    call. We can discuss whether I'm the right fit for your project, and if not, I can point you
-    in the right direction.
-
-who:
-  header: Who I Work With
-  items:
-    - <strong>Research teams and R&D orgs</strong> with working experiments, prototypes, or processes that need to hold up outside the lab.
-    - <strong>Technical founders</strong> who have a real problem but no clear path to a solution yet.
-    - <strong>Small technical teams</strong> whose internal processes have outgrown the workarounds.
 
 cta:
   header: Not sure where to start?
   text: >
-    That's usually a good sign you're in the right place. Reach out and we'll figure out whether I can help.
+    That's usually a good sign you're in the right place. Reach out and we'll figure out how I can help.
   button:
     text: Get in touch
     link: /contact/
