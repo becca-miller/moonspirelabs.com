@@ -12,14 +12,16 @@
 {# Starling Section #}
 <section class="product-summary">
   <div class="container">
-    <div class="product-title">
-      <img src="/assets/starling/starling-icon.webp" alt="" width="56" height="56" class="product-title__icon">
-      <h2 class="section-header">{{ starling.header }}</h2>
+    <div class="content--narrow">
+      <div class="product-title">
+        <img src="/assets/starling/starling-icon.webp" alt="" width="56" height="56" class="product-title__icon">
+        <h2 class="section-header">{{ starling.header }}</h2>
+      </div>
+      <p class="product-summary__tagline"><strong>{{ starling.tagline }}</strong></p>
+      <p>{{ starling.summary }}</p>
+      <p>Available for Windows and Linux on <a href="{{ starling.links.itch }}">itch.io</a> and <a href="{{ starling.links.gumroad }}">Gumroad</a>.</p>
+      <a href="/starling/" class="btn btn--primary">Learn more about Starling</a>
     </div>
-    <p class="product-summary__tagline"><strong>{{ starling.tagline }}</strong></p>
-    <p>{{ starling.summary }}</p>
-    <p>Available for Windows and Linux on <a href="{{ starling.links.itch }}">itch.io</a> and <a href="{{ starling.links.gumroad }}">Gumroad</a>.</p>
-    <a href="/starling/" class="btn btn--primary">Learn more about Starling</a>
   </div>
 </section>
 
