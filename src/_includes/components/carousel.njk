@@ -2,9 +2,8 @@
   Screenshot carousel. Swipe or scroll works without JavaScript;
   /assets/js/carousel.js reveals the arrow and dot controls.
   Expects: carousel.label (accessible name), carousel.shots (list of src, width, height, alt).
-  Optional: carousel.narrow caps the width for tall screenshots.
 #}
-<div class="carousel{% if carousel.narrow %} carousel--narrow{% endif %}" role="region" aria-roledescription="carousel" aria-label="{{ carousel.label }}">
+<div class="carousel" role="region" aria-roledescription="carousel" aria-label="{{ carousel.label }}">
   <div class="carousel__track" tabindex="0">
     {% for shot in carousel.shots %}
     <figure class="carousel__slide screenshot" aria-roledescription="slide" aria-label="{{ loop.index }} of {{ carousel.shots | length }}">

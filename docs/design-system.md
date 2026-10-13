@@ -68,7 +68,7 @@ All shadows share one light source from above and are tinted with the dark teal 
 - **Accent border**: a 4px `--color-accent` left border marks a grouped item in a list of peers (`.service-card`) or a callout (`.panel`, `.form-success`). Don't combine it with a shadow.
 - **Dark CTA card** (`.cta`): closes a page with one call to action or the newsletter form. Centered, `--container-narrow` wide, `--shadow-3`. On phones it keeps a `--space-4` gutter.
 - **Muted band** (`.product-band`): a `--color-bg-muted` background groups a run of sections into one walkthrough. Its sections supply the padding inside it.
-- **Screenshots**: rounded `--radius-lg` with `--shadow-3`. In a carousel, the track carries the radius and shadow, not each image. Tall screenshots use `.carousel--narrow`.
+- **Screenshots**: rounded `--radius-lg` with `--shadow-3`. In a carousel, the track carries the radius and shadow, not each image. Screenshots that read top to bottom, such as two halves of one screen, go in a `.screenshot-stack`, capped at `--container-narrow`.
 - **Carousel dots**: the current dot is wider and primary-colored, so it doesn't rely on color alone.
 - **Focus**: every interactive element shows a 2px `--color-focus` ring on keyboard focus, switched to `--color-focus-on-dark` inside the header, footer, hero, and CTA card. Form fields use a border color change plus a soft teal ring instead.
 - **Nav**: the current page's link (`aria-current="page"`) uses the same raised background as hover.

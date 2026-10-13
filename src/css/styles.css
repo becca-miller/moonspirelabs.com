@@ -1320,14 +1320,21 @@ section { margin-bottom: 0; }
   box-shadow: var(--shadow-3);
 }
 
-/* Screenshot carousel: a scroll-snap track, with arrows and dots added by carousel.js */
-.carousel {
+/* Screenshots stacked vertically, capped so square screenshots aren't taller than a laptop screen */
+.screenshot-stack {
+  display: grid;
+  gap: var(--space-6);
+  max-width: var(--container-narrow);
   margin-top: var(--space-8);
 }
 
-/* Tall screenshots would be taller than a laptop screen at full column width */
-.carousel--narrow {
-  max-width: var(--container-narrow);
+.screenshot-stack .screenshot {
+  margin: 0;
+}
+
+/* Screenshot carousel: a scroll-snap track, with arrows and dots added by carousel.js */
+.carousel {
+  margin-top: var(--space-8);
 }
 
 .carousel__track {

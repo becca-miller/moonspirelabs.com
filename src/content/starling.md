@@ -34,18 +34,15 @@ review:
 
     You can also start your own reviews whenever you'd like. Review a specific album all in
     one sitting, or jump to specific songs you want to review.
-  carousel:
-    label: Review screenshots
-    narrow: true
-    shots:
-      - src: /assets/starling/review-mood.webp
-        width: 1400
-        height: 1571
-        alt: "Review screen for a song, with an energy and mood grid where a pin marks the song as mostly intense and dark, and descriptive words below"
-      - src: /assets/starling/review-words.webp
-        width: 1400
-        height: 1571
-        alt: "Review screen with descriptive words, what draws you to the song, the choice to add it to your curated library or pass, and a notes field"
+  screenshots:
+    - src: /assets/starling/review-energy-mood.webp
+      width: 873
+      height: 873
+      alt: 'Starling review screen for "No Children" by the Mountain Goats. It shows the album cover above an energy and mood grid. The energy goes from calm to intense, and the mood from bright to dark. A pin sits in the lower right quadrant at slightly intense and mostly dark.'
+    - src: /assets/starling/review-tags.webp
+      width: 873
+      height: 873
+      alt: 'Starling''s review screen, scrolled down. It shows rows of mood words, organized by quadrant. The words Aggressive, Angry, Raw, Cathartic, and Sardonic are highlighted. Below that, the question "What draws you to this song?" has Voice, Lyrics, and Emotion selected. The question "Add to your curated library" has "Add" selected.'
 
 listen:
   header: Listen to your library

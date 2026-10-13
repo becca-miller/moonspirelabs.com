@@ -43,8 +43,13 @@
     <div class="content--medium">
       <h2 class="section-header">{{ review.header }}</h2>
       {{ review.text | markdown | safe }}
-      {% set carousel = review.carousel %}
-      {% include "components/carousel.njk" %}
+      <div class="screenshot-stack">
+        {% for shot in review.screenshots %}
+        <figure class="screenshot">
+          <a href="{{ shot.src }}"><img src="{{ shot.src }}" alt="{{ shot.alt }}" width="{{ shot.width }}" height="{{ shot.height }}" loading="lazy"></a>
+        </figure>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </section>
